@@ -9,22 +9,9 @@ A premium, dark-themed AI & Microservices workshop registration platform. Built 
 - 🎭 **Role-Based Access Control** - Distinct User and Admin dashboards.
 - 📧 **Automated Receipts** - In-app HTML email dispatch with QR codes.
 - ✨ **Modern UI/UX** - Tailwind CSS, glassmorphism, and smooth scroll-reveal animations.
-
-## Getting Started
-
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open (https://event-platform-production-f45e.up.railway.app/) with your browser to see the result.
 
 ## Tech Stack
 - React / Next.js
