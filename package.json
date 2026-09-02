@@ -21,7 +21,7 @@
     "canvas-confetti": "^1.9.4",
     "clsx": "^2.1.1",
     "lucide-react": "^0.439.0",
-    "next": "14.2.7",
+    "next": "^14.2.35",
     "next-auth": "^4.24.7",
     "nodemailer": "^6.9.14",
     "react": "^18.3.1",
