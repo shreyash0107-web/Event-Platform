@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Providers } from "@/components/Providers";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
+const font = Plus_Jakarta_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "DevPulse 2026 | AI Engineering & Distributed Systems Masterclass",
@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="scroll-smooth">
-      <body className={`${inter.className} bg-white text-gray-900 min-h-screen flex flex-col`}>
+      <body className={`${font.className} bg-white text-gray-900 min-h-screen flex flex-col tracking-tight`}>
         <Providers>
           <Navbar />
           <div className="flex-1">{children}</div>

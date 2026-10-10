@@ -43,7 +43,7 @@ export function SpeakersSection() {
           ref={headingRef}
           className={`reveal text-center max-w-3xl mx-auto mb-16 ${headingVisible ? "in-view" : ""}`}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-200 text-xs font-bold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-transparent text-indigo-600 border border-indigo-200 text-xs font-bold uppercase tracking-wider mb-4">
             World-Class Instructors
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight">
@@ -65,7 +65,7 @@ export function SpeakersSection() {
                 transitionDelay: cardsVisible ? `${index * 100}ms` : "0ms",
               }}
             >
-              <div className="h-full bg-white border border-gray-200 rounded-3xl p-6 hover:border-blue-500/50 hover:shadow-xl shadow-gray-200/50 hover:shadow-blue-500/10 hover:-transtone-y-2 transition-all duration-300 group flex flex-col justify-between">
+              <div className="h-full bg-white border border-gray-200 rounded-3xl p-6 hover:border-indigo-500/50 hover:shadow-xl shadow-gray-200/50 hover:shadow-indigo-500/10 hover:-transtone-y-2 transition-all duration-300 group flex flex-col justify-between">
                 <div>
                   <div className="relative mb-6 overflow-hidden rounded-2xl border border-gray-200">
                     <img
@@ -75,12 +75,12 @@ export function SpeakersSection() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-80" />
                     {/* subtle top glow on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-blue-500/0 to-transparent group-hover:from-blue-500/10 transition-all duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-indigo-500/0 to-transparent group-hover:from-indigo-500/10 transition-all duration-500" />
                     <div className="absolute bottom-3 left-3 right-3 flex items-center gap-2">
                       {speaker.topics.map((t, i) => (
                         <span
                           key={i}
-                          className="text-[10px] font-extrabold uppercase tracking-wider bg-blue-600/90 text-gray-900 px-2.5 py-1 rounded-md backdrop-blur-md"
+                          className="text-[10px] font-extrabold uppercase tracking-wider bg-indigo-600/90 text-gray-900 px-2.5 py-1 rounded-md backdrop-blur-md"
                         >
                           {t}
                         </span>
@@ -91,7 +91,7 @@ export function SpeakersSection() {
                   <h3 className="text-xl font-extrabold text-gray-900 group-hover:text-indigo-600 transition-colors duration-200">
                     {speaker.name}
                   </h3>
-                  <div className="text-xs font-semibold text-blue-600 mb-1 flex items-center gap-1.5 mt-1">
+                  <div className="text-xs font-semibold text-indigo-600 mb-1 flex items-center gap-1.5 mt-1">
                     <Award className="w-3.5 h-3.5" />
                     {speaker.role}
                   </div>

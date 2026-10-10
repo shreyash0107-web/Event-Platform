@@ -49,12 +49,12 @@ export function TicketBadge({ ticket, onDelete }: TicketProps) {
   const isPaid = ticket.status === "PAID";
 
   return (
-    <div className="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-xl shadow-gray-200/50 transition-all duration-300 hover:border-blue-500/50 group">
+    <div className="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-xl shadow-gray-200/50 transition-all duration-300 hover:border-indigo-500/50 group">
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-blue-900 via-purple-900 to-stone-900 p-6 border-b border-gray-200 relative">
+      <div className="bg-gradient-to-r from-indigo-900 via-purple-900 to-stone-900 p-6 border-b border-gray-200 relative">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <span className="text-[10px] font-black uppercase tracking-widest bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-3 py-1 rounded-full">
+            <span className="text-[10px] font-black uppercase tracking-widest bg-transparent0/20 text-indigo-300 border border-indigo-500/30 px-3 py-1 rounded-full">
               {ticket.tierName}
             </span>
             {isPaid ? (
@@ -62,7 +62,7 @@ export function TicketBadge({ ticket, onDelete }: TicketProps) {
                 <CheckCircle className="w-3 h-3" /> VERIFIED PASS
               </span>
             ) : (
-              <span className="text-[10px] font-black uppercase tracking-widest bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-3 py-1 rounded-full">
+              <span className="text-[10px] font-black uppercase tracking-widest bg-transparent0/20 text-indigo-300 border border-indigo-500/30 px-3 py-1 rounded-full">
                 PENDING PAYMENT
               </span>
             )}
@@ -83,10 +83,10 @@ export function TicketBadge({ ticket, onDelete }: TicketProps) {
               <img
                 src={ticket.user.image}
                 alt="User"
-                className="w-12 h-12 rounded-2xl object-cover border border-blue-500/40 shadow-md"
+                className="w-12 h-12 rounded-2xl object-cover border border-indigo-500/40 shadow-md"
               />
             ) : (
-              <div className="w-12 h-12 rounded-2xl bg-blue-600 flex items-center justify-center text-gray-900 text-base font-bold shadow-md">
+              <div className="w-12 h-12 rounded-2xl bg-indigo-600 flex items-center justify-center text-gray-900 text-base font-bold shadow-md">
                 {ticket.user.name?.[0] || "A"}
               </div>
             )}
@@ -108,7 +108,7 @@ export function TicketBadge({ ticket, onDelete }: TicketProps) {
         <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4 flex items-center justify-between">
           <div className="space-y-1">
             <div className="flex items-center gap-1.5 text-xs text-gray-600">
-              <Calendar className="w-3.5 h-3.5 text-blue-600" />
+              <Calendar className="w-3.5 h-3.5 text-indigo-600" />
               <span>Sat, Sept 26, 2026 • 09:00 AM EST</span>
             </div>
             <div className="flex items-center gap-1.5 text-xs text-gray-500">
@@ -134,7 +134,7 @@ export function TicketBadge({ ticket, onDelete }: TicketProps) {
         <div className="flex items-center gap-3">
           <button
             onClick={() => window.print()}
-            className="text-blue-600 hover:text-blue-300 font-semibold flex items-center gap-1 transition-colors"
+            className="text-indigo-600 hover:text-indigo-300 font-semibold flex items-center gap-1 transition-colors"
           >
             <Download className="w-3.5 h-3.5" /> Save Pass
           </button>

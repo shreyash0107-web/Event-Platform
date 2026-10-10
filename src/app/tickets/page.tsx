@@ -33,7 +33,7 @@ export default function MyTicketsPage() {
     return (
       <div className="min-h-[70vh] flex items-center justify-center text-gray-900">
         <div className="flex items-center gap-3">
-          <RefreshCw className="w-5 h-5 text-blue-600 animate-spin" />
+          <RefreshCw className="w-5 h-5 text-indigo-600 animate-spin" />
           <span className="text-sm font-semibold">Retrieving your digital passes...</span>
         </div>
       </div>
@@ -44,7 +44,7 @@ export default function MyTicketsPage() {
     return (
       <div className="min-h-[70vh] flex items-center justify-center p-4">
         <div className="bg-white border border-gray-200 rounded-3xl p-8 max-w-md w-full text-center space-y-4 shadow-xl shadow-gray-200/50">
-          <div className="w-14 h-14 rounded-2xl bg-blue-50 border border-blue-200 text-blue-600 flex items-center justify-center mx-auto">
+          <div className="w-14 h-14 rounded-2xl bg-transparent border border-indigo-200 text-indigo-600 flex items-center justify-center mx-auto">
             <Ticket className="w-8 h-8" />
           </div>
           <h2 className="text-2xl font-black text-gray-900">Sign In Required</h2>
@@ -59,7 +59,7 @@ export default function MyTicketsPage() {
                 callbackUrl: "/tickets",
               })
             }
-            className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-gray-900 text-xs font-bold rounded-xl shadow-lg flex items-center justify-center gap-2"
+            className="w-full py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-gray-900 text-xs font-bold rounded-xl shadow-lg flex items-center justify-center gap-2"
           >
             <UserCheck className="w-4 h-4" /> Sign In as Demo Attendee
           </button>
@@ -97,7 +97,7 @@ export default function MyTicketsPage() {
           </p>
           <Link
             href="/#pricing"
-            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-gray-900 font-bold text-xs px-6 py-3 rounded-xl transition-colors"
+            className="inline-flex items-center gap-2 bg-indigo-600 hover:bg-transparent0 text-gray-900 font-bold text-xs px-6 py-3 rounded-xl transition-colors"
           >
             Reserve Workshop Ticket
           </Link>

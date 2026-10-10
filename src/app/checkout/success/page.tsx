@@ -69,8 +69,8 @@ function SuccessContent() {
           Thank you for securing your ticket for <strong>DevPulse 2026</strong>. An automated HTML receipt & ticket confirmation email has been auto-sent to your inbox.
         </p>
 
-        <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 px-4 py-2 rounded-full text-xs font-semibold text-blue-300">
-          <Mail className="w-4 h-4 text-blue-600" />
+        <div className="inline-flex items-center gap-2 bg-transparent border border-indigo-200 px-4 py-2 rounded-full text-xs font-semibold text-indigo-300">
+          <Mail className="w-4 h-4 text-indigo-600" />
           <span>Email Receipt Dispatched • Click top-right Inbox to view</span>
         </div>
       </div>
@@ -90,7 +90,7 @@ function SuccessContent() {
       <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
         <Link
           href="/tickets"
-          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-500 text-gray-900 font-bold text-sm px-8 py-4 rounded-xl shadow-lg shadow-blue-600/30 hover:scale-[1.02] transition-all"
+          className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 to-indigo-500 text-gray-900 font-bold text-sm px-8 py-4 rounded-xl shadow-lg shadow-indigo-600/30 hover:scale-[1.02] transition-all"
         >
           <Ticket className="w-4 h-4" /> View All My Digital Passes
         </Link>

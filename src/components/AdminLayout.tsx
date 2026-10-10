@@ -14,7 +14,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center text-gray-900">
         <div className="flex items-center gap-3">
-          <div className="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
+          <div className="w-5 h-5 border-2 border-indigo-500 border-t-transparent rounded-full animate-spin" />
           <span className="text-sm font-semibold">Verifying Admin Access...</span>
         </div>
       </div>
@@ -42,7 +42,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
           <div className="pt-2">
             <Link
               href="/"
-              className="w-full inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-gray-900 font-bold text-xs py-3 px-4 rounded-xl transition-colors"
+              className="w-full inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-transparent0 text-gray-900 font-bold text-xs py-3 px-4 rounded-xl transition-colors"
             >
               <ArrowLeft className="w-4 h-4" /> Return to Main Landing Page
             </Link>

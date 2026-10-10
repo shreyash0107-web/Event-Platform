@@ -41,7 +41,7 @@ export function AdminStatsCards({ stats }: Props) {
         <div className="bg-white border border-gray-200 rounded-3xl p-6 shadow-xl">
           <div className="flex items-center justify-between mb-4">
             <span className="text-xs font-bold uppercase tracking-wider text-gray-500">Paid Tickets</span>
-            <div className="p-2 rounded-xl bg-blue-50 text-blue-600 border border-blue-200">
+            <div className="p-2 rounded-xl bg-transparent text-indigo-600 border border-indigo-200">
               <Ticket className="w-5 h-5" />
             </div>
           </div>
@@ -55,7 +55,7 @@ export function AdminStatsCards({ stats }: Props) {
         <div className="bg-white border border-gray-200 rounded-3xl p-6 shadow-xl">
           <div className="flex items-center justify-between mb-4">
             <span className="text-xs font-bold uppercase tracking-wider text-gray-500">Registered Accounts</span>
-            <div className="p-2 rounded-xl bg-indigo-50 text-indigo-600 border border-indigo-200">
+            <div className="p-2 rounded-xl bg-transparent text-indigo-600 border border-indigo-200">
               <Users className="w-5 h-5" />
             </div>
           </div>
@@ -99,10 +99,10 @@ export function AdminStatsCards({ stats }: Props) {
 
           <div className="p-4 rounded-2xl bg-gray-50 border border-gray-200">
             <div className="text-xs text-gray-500 font-semibold mb-1">Developer Pass ($99)</div>
-            <div className="text-2xl font-extrabold text-blue-600">{stats.breakdown.STANDARD}</div>
+            <div className="text-2xl font-extrabold text-indigo-600">{stats.breakdown.STANDARD}</div>
             <div className="w-full border-gray-200 h-1.5 rounded-full mt-3 overflow-hidden">
               <div
-                className="bg-blue-400 h-full rounded-full"
+                className="bg-indigo-400 h-full rounded-full"
                 style={{ width: `${Math.min(100, (stats.breakdown.STANDARD / 100) * 100)}%` }}
               />
             </div>

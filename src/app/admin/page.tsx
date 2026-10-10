@@ -54,7 +54,7 @@ export default function AdminDashboardPage() {
             </button>
             <a
               href="/api/admin/attendees/export"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-gray-900 font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg transition-all"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-gray-900 font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg transition-all"
             >
               <Download className="w-4 h-4" /> Export CSV
             </a>

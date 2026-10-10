@@ -14,7 +14,7 @@ export function WorkshopAgenda() {
       time: "09:00 AM - 10:45 AM",
       title: "Module 1: Building High-Performance LLM Agents & Tool Use",
       icon: Cpu,
-      color: "from-indigo-500 to-blue-500",
+      color: "from-indigo-500 to-indigo-500",
       description:
         "Architecting multi-step autonomous AI agents, function calling schemas, stateful reasoning loops, and prompt caching strategies.",
       topics: [
@@ -28,7 +28,7 @@ export function WorkshopAgenda() {
       time: "11:00 AM - 12:30 PM",
       title: "Module 2: RAG Systems & Hybrid Vector Search at Scale",
       icon: Database,
-      color: "from-blue-500 to-purple-500",
+      color: "from-indigo-500 to-purple-500",
       description:
         "Deep dive into semantic search, sparse-dense hybrid retrieval, chunking algorithms, and reranking models for enterprise knowledge bases.",
       topics: [
@@ -75,7 +75,7 @@ export function WorkshopAgenda() {
           ref={headingRef}
           className={`reveal text-center max-w-3xl mx-auto mb-16 ${headingVisible ? "in-view" : ""}`}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 border border-blue-200 text-xs font-bold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-transparent text-indigo-600 border border-indigo-200 text-xs font-bold uppercase tracking-wider mb-4">
             Curriculum &amp; Schedule
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight">
@@ -103,7 +103,7 @@ export function WorkshopAgenda() {
                   style={{ transitionDelay: gridVisible ? `${index * 80}ms` : "0ms" }}
                   className={`reveal ${gridVisible ? "in-view" : ""} w-full text-left p-5 rounded-2xl border transition-all duration-200 flex items-start gap-4 hover:-transtone-y-0.5 ${
                     isActive
-                      ? "bg-white border-blue-500/60 shadow-xl shadow-blue-500/10 ring-1 ring-blue-500/30"
+                      ? "bg-white border-indigo-500/60 shadow-xl shadow-indigo-500/10 ring-1 ring-indigo-500/30"
                       : "bg-white border-gray-200/80 hover:bg-white/70 hover:border-gray-300 hover:shadow-lg"
                   }`}
                 >
@@ -131,7 +131,7 @@ export function WorkshopAgenda() {
 
           {/* Active Module Details Card (Right) */}
           <div className="lg:col-span-7 bg-white border border-gray-200 rounded-3xl p-6 sm:p-8 shadow-xl shadow-gray-200/50 relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 blur-3xl rounded-full pointer-events-none" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-transparent blur-3xl rounded-full pointer-events-none" />
 
             <div className="flex items-center gap-2 text-xs font-bold text-indigo-600 uppercase tracking-widest mb-3">
               <Clock className="w-4 h-4" />
@@ -148,7 +148,7 @@ export function WorkshopAgenda() {
 
             <div className="space-y-4 pt-4 border-t border-gray-200">
               <h4 className="text-xs font-bold uppercase tracking-wider text-gray-500 flex items-center gap-2">
-                <Code className="w-4 h-4 text-blue-600" /> Key Topics & Code Alongs
+                <Code className="w-4 h-4 text-indigo-600" /> Key Topics & Code Alongs
               </h4>
               <ul className="space-y-3">
                 {modules[activeModule].topics.map((topic, i) => (

@@ -55,7 +55,7 @@ export function Navbar() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-blue-600 via-purple-600 to-indigo-400 p-0.5 shadow-lg shadow-blue-500/20 group-hover:shadow-blue-500/40 transition-all duration-300">
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-purple-600 to-indigo-400 p-0.5 shadow-lg shadow-indigo-500/20 group-hover:shadow-indigo-500/40 transition-all duration-300">
               <div className="w-full h-full bg-gray-50 rounded-[10px] flex items-center justify-center">
                 <Sparkles className="w-5 h-5 text-indigo-600 group-hover:scale-110 transition-transform" />
               </div>
@@ -65,7 +65,7 @@ export function Navbar() {
                 <span className="font-extrabold text-lg text-gray-900 tracking-tight">
                   DevPulse<span className="text-indigo-600">.2026</span>
                 </span>
-                <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-blue-50 text-blue-600 border border-blue-200">
+                <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-transparent text-indigo-600 border border-indigo-200">
                   Masterclass
                 </span>
               </div>
@@ -96,14 +96,14 @@ export function Navbar() {
                 href="/tickets"
                 className="relative hover:text-indigo-600 transition-colors duration-200 flex items-center gap-1.5 after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-indigo-400 after:transition-all after:duration-200 hover:after:w-full"
               >
-                <Ticket className="w-4 h-4 text-blue-600" />
+                <Ticket className="w-4 h-4 text-indigo-600" />
                 My Pass
               </Link>
             )}
             {session?.user?.role === "ADMIN" && (
               <Link
                 href="/admin"
-                className="flex items-center gap-1.5 bg-gradient-to-r from-purple-600/20 to-blue-600/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded-full text-xs font-semibold hover:border-purple-400 transition-all shadow-sm"
+                className="flex items-center gap-1.5 bg-gradient-to-r from-purple-600/20 to-indigo-600/20 text-purple-300 border border-purple-500/30 px-3 py-1 rounded-full text-xs font-semibold hover:border-purple-400 transition-all shadow-sm"
               >
                 <Shield className="w-3.5 h-3.5 text-purple-600" />
                 Admin Dashboard
@@ -116,10 +116,10 @@ export function Navbar() {
             {/* In-App Inbox Button */}
             <button
               onClick={() => setInboxOpen(true)}
-              className="relative p-2 rounded-xl border border-gray-200 bg-white text-gray-600 hover:text-gray-900 hover:border-blue-500/40 transition-all group"
+              className="relative p-2 rounded-xl border border-gray-200 bg-white text-gray-600 hover:text-gray-900 hover:border-indigo-500/40 transition-all group"
               title="Open Confirmation Email Viewer"
             >
-              <Mail className="w-4 h-4 group-hover:scale-110 transition-transform text-blue-600" />
+              <Mail className="w-4 h-4 group-hover:scale-110 transition-transform text-indigo-600" />
               <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-500 rounded-full animate-ping" />
               <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-500 rounded-full" />
             </button>
@@ -143,11 +143,11 @@ export function Navbar() {
                     <img
                       src={session.user.image}
                       alt="User avatar"
-                      className="w-7 h-7 rounded-full object-cover border border-blue-500/30"
+                      className="w-7 h-7 rounded-full object-cover border border-indigo-500/30"
                       onError={() => setAvatarError(true)}
                     />
                   ) : (
-                    <div className="w-7 h-7 rounded-full bg-blue-600 flex items-center justify-center text-gray-900 text-xs font-bold">
+                    <div className="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-gray-900 text-xs font-bold">
                       {(session.user.name?.[0] || session.user.email?.[0] || "U").toUpperCase()}
                     </div>
                   )}
@@ -164,7 +164,7 @@ export function Navbar() {
               <div className="relative">
                 <button
                   onClick={() => setLoginDropdownOpen(!loginDropdownOpen)}
-                  className="btn-press flex items-center gap-2 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-500 hover:to-purple-500 text-gray-900 font-semibold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-blue-500/50 hover:scale-[1.04] transition-all duration-200"
+                  className="btn-press flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-gray-900 font-semibold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/50 hover:scale-[1.04] transition-all duration-200"
                 >
                   <span>Sign In / Demo</span>
                   <ChevronDown className={`w-3.5 h-3.5 transition-transform ${loginDropdownOpen ? "rotate-180" : ""}`} />
@@ -201,16 +201,16 @@ export function Navbar() {
                     </button>
 
                     <div className="border-t border-gray-200 pt-2 mt-2">
-                      <div className="text-[11px] font-semibold text-blue-600 uppercase tracking-wider px-2 py-1 flex items-center justify-between">
+                      <div className="text-[11px] font-semibold text-indigo-600 uppercase tracking-wider px-2 py-1 flex items-center justify-between">
                         <span>Instant Demo Login</span>
-                        <span className="text-[9px] bg-blue-500/20 text-blue-300 px-1.5 py-0.5 rounded">No password</span>
+                        <span className="text-[9px] bg-transparent0/20 text-indigo-300 px-1.5 py-0.5 rounded">No password</span>
                       </div>
                       <button
                         onClick={() => handleDemoSignIn("USER")}
-                        className="w-full text-left px-3 py-2 bg-blue-950/40 hover:bg-blue-900/60 border border-blue-500/30 rounded-xl text-xs font-semibold text-blue-200 transition-all flex items-center justify-between mb-1.5"
+                        className="w-full text-left px-3 py-2 bg-indigo-950/40 hover:bg-indigo-900/60 border border-indigo-500/30 rounded-xl text-xs font-semibold text-indigo-200 transition-all flex items-center justify-between mb-1.5"
                       >
                         <span>Login as Attendee</span>
-                        <User className="w-3.5 h-3.5 text-blue-600" />
+                        <User className="w-3.5 h-3.5 text-indigo-600" />
                       </button>
                       <button
                         onClick={() => handleDemoSignIn("ADMIN")}
@@ -232,7 +232,7 @@ export function Navbar() {
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={() => setInboxOpen(true)}
-              className="p-2 text-blue-600 border border-gray-200 rounded-xl bg-white"
+              className="p-2 text-indigo-600 border border-gray-200 rounded-xl bg-white"
             >
               <Mail className="w-5 h-5" />
             </button>
@@ -280,7 +280,7 @@ export function Navbar() {
               <Link
                 href="/tickets"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block text-sm text-blue-600 font-semibold"
+                className="block text-sm text-indigo-600 font-semibold"
               >
                 My Pass & Tickets
               </Link>
@@ -330,12 +330,12 @@ export function Navbar() {
                     </span>
                   </button>
 
-                  <div className="text-[11px] font-semibold text-blue-600 uppercase tracking-wider px-1 pt-2">
+                  <div className="text-[11px] font-semibold text-indigo-600 uppercase tracking-wider px-1 pt-2">
                     Instant Demo Login
                   </div>
                   <button
                     onClick={() => handleDemoSignIn("USER")}
-                    className="w-full text-center py-2 bg-blue-600 text-gray-900 rounded-xl text-sm font-bold"
+                    className="w-full text-center py-2 bg-indigo-600 text-gray-900 rounded-xl text-sm font-bold"
                   >
                     Quick Demo Sign In (Attendee)
                   </button>

@@ -53,8 +53,8 @@ function FaqSection() {
               style={{ transitionDelay: listVisible ? `${i * 80}ms` : "0ms" }}
             >
               <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg hover:border-gray-300 hover:shadow-xl hover:-transtone-y-0.5 transition-all duration-300 group">
-                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center gap-2 group-hover:text-blue-300 transition-colors">
-                  <HelpCircle className="w-5 h-5 text-blue-600 shrink-0" />
+                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center gap-2 group-hover:text-indigo-300 transition-colors">
+                  <HelpCircle className="w-5 h-5 text-indigo-600 shrink-0" />
                   {faq.q}
                 </h3>
                 <p className="text-xs sm:text-sm text-gray-500 leading-relaxed pl-7">{faq.a}</p>

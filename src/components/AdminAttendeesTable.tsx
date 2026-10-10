@@ -82,7 +82,7 @@ export function AdminAttendeesTable() {
         <div>
           <h2 className="text-xl font-extrabold text-gray-900 flex items-center gap-2">
             Registered Attendees List
-            <span className="text-xs font-mono font-bold bg-blue-500/20 text-blue-300 border border-blue-500/30 px-2.5 py-0.5 rounded-full">
+            <span className="text-xs font-mono font-bold bg-transparent0/20 text-indigo-300 border border-indigo-500/30 px-2.5 py-0.5 rounded-full">
               {tickets.length} total
             </span>
           </h2>
@@ -94,7 +94,7 @@ export function AdminAttendeesTable() {
         {/* CSV Export Action Button */}
         <a
           href="/api/admin/attendees/export"
-          className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-gray-900 font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-blue-600/20 transition-all shrink-0"
+          className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-gray-900 font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-indigo-600/20 transition-all shrink-0"
         >
           <Download className="w-4 h-4" /> Export CSV Report
         </a>
@@ -109,7 +109,7 @@ export function AdminAttendeesTable() {
             placeholder="Search by code, user name, or email..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full bg-gray-50 border border-gray-200 rounded-xl pl-9 pr-4 py-2.5 text-xs text-gray-900 placeholder-stone-500 focus:outline-none focus:border-blue-500 transition-colors"
+            className="w-full bg-gray-50 border border-gray-200 rounded-xl pl-9 pr-4 py-2.5 text-xs text-gray-900 placeholder-stone-500 focus:outline-none focus:border-indigo-500 transition-colors"
           />
           <Search className="w-4 h-4 text-gray-400 absolute left-3 top-3" />
         </div>
@@ -119,7 +119,7 @@ export function AdminAttendeesTable() {
           <select
             value={tierFilter}
             onChange={(e) => setTierFilter(e.target.value)}
-            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-xs text-gray-800 focus:outline-none focus:border-blue-500 transition-colors"
+            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-xs text-gray-800 focus:outline-none focus:border-indigo-500 transition-colors"
           >
             <option value="ALL">All Ticket Tiers</option>
             <option value="EARLY_BIRD">Early Bird Pass</option>
@@ -133,7 +133,7 @@ export function AdminAttendeesTable() {
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-xs text-gray-800 focus:outline-none focus:border-blue-500 transition-colors"
+            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-xs text-gray-800 focus:outline-none focus:border-indigo-500 transition-colors"
           >
             <option value="ALL">All Payment Statuses</option>
             <option value="PAID">PAID Only</option>
@@ -160,7 +160,7 @@ export function AdminAttendeesTable() {
             {loading ? (
               <tr>
                 <td colSpan={7} className="py-12 text-center text-gray-400">
-                  <RefreshCw className="w-6 h-6 animate-spin mx-auto mb-2 text-blue-600" />
+                  <RefreshCw className="w-6 h-6 animate-spin mx-auto mb-2 text-indigo-600" />
                   Loading attendee records...
                 </td>
               </tr>
@@ -182,7 +182,7 @@ export function AdminAttendeesTable() {
                           className="w-7 h-7 rounded-full object-cover border border-gray-300"
                         />
                       ) : (
-                        <div className="w-7 h-7 rounded-full bg-blue-600/30 text-blue-300 flex items-center justify-center font-bold text-xs">
+                        <div className="w-7 h-7 rounded-full bg-indigo-600/30 text-indigo-300 flex items-center justify-center font-bold text-xs">
                           {t.user.name?.[0] || "U"}
                         </div>
                       )}
@@ -207,7 +207,7 @@ export function AdminAttendeesTable() {
                         <CheckCircle className="w-3 h-3" /> PAID
                       </span>
                     ) : (
-                      <span className="inline-flex items-center gap-1 bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-2 py-0.5 rounded-full font-bold text-[10px]">
+                      <span className="inline-flex items-center gap-1 bg-transparent0/20 text-indigo-300 border border-indigo-500/30 px-2 py-0.5 rounded-full font-bold text-[10px]">
                         <Clock className="w-3 h-3" /> PENDING
                       </span>
                     )}

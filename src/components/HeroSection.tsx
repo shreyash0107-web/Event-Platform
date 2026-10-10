@@ -61,11 +61,11 @@ export function HeroSection() {
     <section id="about" className="relative pt-12 pb-24 overflow-hidden">
       {/* ── Animated background glow orbs ─────────────────────── */}
       <div
-        className="absolute top-1/4 left-1/2 w-[720px] h-[420px] bg-gradient-to-tr from-blue-100 via-indigo-50 to-purple-50 blur-[140px] rounded-full pointer-events-none animate-glow-drift"
+        className="absolute top-1/4 left-1/2 w-[720px] h-[420px] bg-gradient-to-tr from-indigo-100 via-indigo-50 to-purple-50 blur-[140px] rounded-full pointer-events-none animate-glow-drift"
         style={{ transform: "translate(-50%, -50%)" }}
       />
       <div
-        className="absolute top-2/3 left-1/3 w-[480px] h-[320px] bg-gradient-to-br from-purple-100 to-blue-50 blur-[110px] rounded-full pointer-events-none animate-glow-drift-2"
+        className="absolute top-2/3 left-1/3 w-[480px] h-[320px] bg-gradient-to-br from-purple-100 to-indigo-50 blur-[110px] rounded-full pointer-events-none animate-glow-drift-2"
         style={{ transform: "translate(-50%, -50%)" }}
       />
       {/* subtle grid pattern */}
@@ -94,7 +94,7 @@ export function HeroSection() {
         {/* ── Main headline ─── */}
         <h1 className="animate-fade-up anim-delay-200 text-4xl sm:text-6xl lg:text-7xl font-black text-gray-900 tracking-tight max-w-4xl mx-auto leading-[1.1] mb-6">
           Mastering AI Engineering &amp;{" "}
-          <span className="text-blue-600">
+          <span className="text-indigo-600">
             Distributed Systems
           </span>
         </h1>
@@ -123,7 +123,7 @@ export function HeroSection() {
             <CountCell
               value={String(timeLeft.minutes).padStart(2, "0")}
               label="Minutes"
-              colorClass="text-blue-600"
+              colorClass="text-indigo-600"
             />
             <CountCell
               value={String(timeLeft.seconds).padStart(2, "0")}
@@ -137,16 +137,16 @@ export function HeroSection() {
         <div className="animate-fade-up anim-delay-650 flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <a
             href="/#pricing"
-            className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-gray-900 font-bold text-base px-8 py-4 rounded-xl shadow-xl shadow-blue-600/20 hover:shadow-blue-500/30 hover:scale-[1.03] transition-all duration-200"
+            className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-indigo-600 hover:bg-indigo-700 text-white font-bold text-base px-8 py-4 rounded-xl shadow-xl shadow-indigo-600/20 hover:shadow-indigo-500/30 hover:scale-[1.03] transition-all duration-200"
           >
             <span>Reserve Your Ticket Now</span>
             <ArrowRight className="w-5 h-5 group-hover:transtone-x-1 transition-transform" />
           </a>
           <a
             href="/#agenda"
-            className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:border-gray-200 text-gray-800 border border-gray-300 hover:border-blue-500/50 font-semibold text-base px-8 py-4 rounded-xl hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-200"
+            className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:border-gray-200 text-gray-800 border border-gray-300 hover:border-indigo-500/50 font-semibold text-base px-8 py-4 rounded-xl hover:shadow-lg hover:shadow-indigo-500/10 transition-all duration-200"
           >
-            <Zap className="w-5 h-5 text-blue-600" />
+            <Zap className="w-5 h-5 text-indigo-600" />
             <span>Explore Workshop Agenda</span>
           </a>
         </div>
@@ -156,13 +156,13 @@ export function HeroSection() {
           {[
             {
               icon: Calendar,
-              color: "bg-blue-50 text-blue-600 border-blue-200",
+              color: "bg-transparent text-indigo-600 border-indigo-200",
               title: "Date & Duration",
               desc: "Sat, Sept 26, 2026 • 8 Hours Full Day",
             },
             {
               icon: MapPin,
-              color: "bg-indigo-50 text-indigo-600 border-indigo-200",
+              color: "bg-transparent text-indigo-600 border-indigo-200",
               title: "Location & Stream",
               desc: "TP Ganesan Auditorium + 4K Stream",
             },
