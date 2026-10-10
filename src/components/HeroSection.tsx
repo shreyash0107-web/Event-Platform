@@ -61,19 +61,19 @@ export function HeroSection() {
     <section id="about" className="relative pt-12 pb-24 overflow-hidden">
       {/* ── Animated background glow orbs ─────────────────────── */}
       <div
-        className="absolute top-1/4 left-1/2 w-[720px] h-[420px] bg-gradient-to-tr from-indigo-600/25 via-purple-600/20 to-cyan-400/15 blur-[140px] rounded-full pointer-events-none animate-glow-drift"
+        className="absolute top-1/4 left-1/2 w-[720px] h-[420px] bg-gradient-to-tr from-amber-600/25 via-orange-600/20 to-red-400/15 blur-[140px] rounded-full pointer-events-none animate-glow-drift"
         style={{ transform: "translate(-50%, -50%)" }}
       />
       <div
-        className="absolute top-2/3 left-1/3 w-[480px] h-[320px] bg-gradient-to-br from-violet-600/15 to-cyan-500/10 blur-[110px] rounded-full pointer-events-none animate-glow-drift-2"
+        className="absolute top-2/3 left-1/3 w-[480px] h-[320px] bg-gradient-to-br from-orange-600/15 to-yellow-500/10 blur-[110px] rounded-full pointer-events-none animate-glow-drift-2"
         style={{ transform: "translate(-50%, -50%)" }}
       />
       {/* subtle grid pattern */}
       <div
-        className="absolute inset-0 pointer-events-none opacity-[0.025]"
+        className="absolute inset-0 pointer-events-none opacity-[0.035]"
         style={{
           backgroundImage:
-            "linear-gradient(rgba(99,102,241,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(99,102,241,0.4) 1px, transparent 1px)",
+            "linear-gradient(rgba(245,158,11,0.4) 1px, transparent 1px), linear-gradient(90deg, rgba(245,158,11,0.4) 1px, transparent 1px)",
           backgroundSize: "64px 64px",
         }}
       />
@@ -94,7 +94,7 @@ export function HeroSection() {
         {/* ── Main headline ─── */}
         <h1 className="animate-fade-up anim-delay-200 text-4xl sm:text-6xl lg:text-7xl font-black text-white tracking-tight max-w-4xl mx-auto leading-[1.1] mb-6">
           Mastering AI Engineering &amp;{" "}
-          <span className="bg-gradient-to-r from-cyan-400 via-indigo-400 to-violet-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-amber-400 via-orange-500 to-red-500 bg-clip-text text-transparent">
             Distributed Systems
           </span>
         </h1>
@@ -137,16 +137,16 @@ export function HeroSection() {
         <div className="animate-fade-up anim-delay-650 flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
           <a
             href="/#pricing"
-            className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-indigo-600 via-violet-600 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white font-bold text-base px-8 py-4 rounded-xl shadow-xl shadow-indigo-600/30 hover:shadow-indigo-500/50 hover:scale-[1.03] transition-all duration-200"
+            className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-gradient-to-r from-orange-600 via-amber-600 to-yellow-500 hover:from-orange-500 hover:to-yellow-400 text-white font-bold text-base px-8 py-4 rounded-xl shadow-xl shadow-orange-600/30 hover:shadow-orange-500/50 hover:scale-[1.03] transition-all duration-200"
           >
             <span>Reserve Your Ticket Now</span>
             <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
           </a>
           <a
             href="/#agenda"
-            className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-indigo-500/50 font-semibold text-base px-8 py-4 rounded-xl hover:shadow-lg hover:shadow-indigo-500/10 transition-all duration-200"
+            className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-slate-900 hover:bg-slate-800 text-slate-200 border border-slate-700 hover:border-orange-500/50 font-semibold text-base px-8 py-4 rounded-xl hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-200"
           >
-            <Zap className="w-5 h-5 text-indigo-400" />
+            <Zap className="w-5 h-5 text-orange-400" />
             <span>Explore Workshop Agenda</span>
           </a>
         </div>
