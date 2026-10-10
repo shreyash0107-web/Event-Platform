@@ -43,13 +43,13 @@ export function SpeakersSection() {
           ref={headingRef}
           className={`reveal text-center max-w-3xl mx-auto mb-16 ${headingVisible ? "in-view" : ""}`}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-indigo-50 text-indigo-600 border border-indigo-200 text-xs font-bold uppercase tracking-wider mb-4">
             World-Class Instructors
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
-            Learn From Industry <span className="text-amber-400">Pioneers</span>
+          <h2 className="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight">
+            Learn From Industry <span className="text-indigo-600">Pioneers</span>
           </h2>
-          <p className="text-stone-400 mt-4 text-base sm:text-lg">
+          <p className="text-gray-500 mt-4 text-base sm:text-lg">
             Directly learn from engineers who build the platforms and protocols powering modern web
             applications.
           </p>
@@ -65,9 +65,9 @@ export function SpeakersSection() {
                 transitionDelay: cardsVisible ? `${index * 100}ms` : "0ms",
               }}
             >
-              <div className="h-full bg-stone-900 border border-stone-800 rounded-3xl p-6 hover:border-orange-500/50 hover:shadow-2xl hover:shadow-orange-500/10 hover:-transtone-y-2 transition-all duration-300 group flex flex-col justify-between">
+              <div className="h-full bg-white border border-gray-200 rounded-3xl p-6 hover:border-orange-500/50 hover:shadow-xl shadow-gray-200/50 hover:shadow-orange-500/10 hover:-transtone-y-2 transition-all duration-300 group flex flex-col justify-between">
                 <div>
-                  <div className="relative mb-6 overflow-hidden rounded-2xl border border-stone-800">
+                  <div className="relative mb-6 overflow-hidden rounded-2xl border border-gray-200">
                     <img
                       src={speaker.image}
                       alt={speaker.name}
@@ -80,7 +80,7 @@ export function SpeakersSection() {
                       {speaker.topics.map((t, i) => (
                         <span
                           key={i}
-                          className="text-[10px] font-extrabold uppercase tracking-wider bg-orange-600/90 text-white px-2.5 py-1 rounded-md backdrop-blur-md"
+                          className="text-[10px] font-extrabold uppercase tracking-wider bg-orange-600/90 text-gray-900 px-2.5 py-1 rounded-md backdrop-blur-md"
                         >
                           {t}
                         </span>
@@ -88,31 +88,31 @@ export function SpeakersSection() {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-extrabold text-white group-hover:text-amber-400 transition-colors duration-200">
+                  <h3 className="text-xl font-extrabold text-gray-900 group-hover:text-indigo-600 transition-colors duration-200">
                     {speaker.name}
                   </h3>
-                  <div className="text-xs font-semibold text-orange-400 mb-1 flex items-center gap-1.5 mt-1">
+                  <div className="text-xs font-semibold text-blue-600 mb-1 flex items-center gap-1.5 mt-1">
                     <Award className="w-3.5 h-3.5" />
                     {speaker.role}
                   </div>
-                  <div className="text-xs text-stone-400 mb-4 flex items-center gap-1.5">
-                    <Building2 className="w-3.5 h-3.5 text-stone-500" />
+                  <div className="text-xs text-gray-500 mb-4 flex items-center gap-1.5">
+                    <Building2 className="w-3.5 h-3.5 text-gray-400" />
                     {speaker.company}
                   </div>
 
-                  <p className="text-xs text-stone-300 leading-relaxed mb-6">{speaker.bio}</p>
+                  <p className="text-xs text-gray-600 leading-relaxed mb-6">{speaker.bio}</p>
                 </div>
 
-                <div className="pt-4 border-t border-stone-800/80 flex items-center justify-between">
-                  <span className="text-[11px] text-stone-500 font-medium">
+                <div className="pt-4 border-t border-gray-200/80 flex items-center justify-between">
+                  <span className="text-[11px] text-gray-400 font-medium">
                     Verified Masterclass Speaker
                   </span>
-                  <div className="flex items-center gap-3 text-stone-400">
+                  <div className="flex items-center gap-3 text-gray-500">
                     {[Twitter, Linkedin, Github].map((Icon, i) => (
                       <a
                         key={i}
                         href="#"
-                        className="hover:text-amber-400 hover:scale-110 transition-all duration-200"
+                        className="hover:text-indigo-600 hover:scale-110 transition-all duration-200"
                       >
                         <Icon className="w-4 h-4" />
                       </a>

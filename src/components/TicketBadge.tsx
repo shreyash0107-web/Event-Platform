@@ -49,16 +49,16 @@ export function TicketBadge({ ticket, onDelete }: TicketProps) {
   const isPaid = ticket.status === "PAID";
 
   return (
-    <div className="bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden shadow-2xl transition-all duration-300 hover:border-orange-500/50 group">
+    <div className="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-xl shadow-gray-200/50 transition-all duration-300 hover:border-orange-500/50 group">
       {/* Header Banner */}
-      <div className="bg-gradient-to-r from-orange-900 via-yellow-900 to-stone-900 p-6 border-b border-stone-800 relative">
+      <div className="bg-gradient-to-r from-orange-900 via-yellow-900 to-stone-900 p-6 border-b border-gray-200 relative">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
             <span className="text-[10px] font-black uppercase tracking-widest bg-amber-500/20 text-amber-300 border border-amber-500/30 px-3 py-1 rounded-full">
               {ticket.tierName}
             </span>
             {isPaid ? (
-              <span className="text-[10px] font-black uppercase tracking-widest bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-3 py-1 rounded-full flex items-center gap-1">
+              <span className="text-[10px] font-black uppercase tracking-widest bg-emerald-500/20 text-emerald-600 border border-emerald-500/30 px-3 py-1 rounded-full flex items-center gap-1">
                 <CheckCircle className="w-3 h-3" /> VERIFIED PASS
               </span>
             ) : (
@@ -67,16 +67,16 @@ export function TicketBadge({ ticket, onDelete }: TicketProps) {
               </span>
             )}
           </div>
-          <span className="text-xs font-mono text-stone-400">DevPulse 2026</span>
+          <span className="text-xs font-mono text-gray-500">DevPulse 2026</span>
         </div>
 
-        <h3 className="text-lg sm:text-xl font-extrabold text-white mt-4 line-clamp-1">
+        <h3 className="text-lg sm:text-xl font-extrabold text-gray-900 mt-4 line-clamp-1">
           {ticket.event.title}
         </h3>
       </div>
 
       {/* Ticket Details Body */}
-      <div className="p-6 space-y-6 bg-stone-900">
+      <div className="p-6 space-y-6 bg-white">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
             {ticket.user.image ? (
@@ -86,33 +86,33 @@ export function TicketBadge({ ticket, onDelete }: TicketProps) {
                 className="w-12 h-12 rounded-2xl object-cover border border-orange-500/40 shadow-md"
               />
             ) : (
-              <div className="w-12 h-12 rounded-2xl bg-orange-600 flex items-center justify-center text-white text-base font-bold shadow-md">
+              <div className="w-12 h-12 rounded-2xl bg-orange-600 flex items-center justify-center text-gray-900 text-base font-bold shadow-md">
                 {ticket.user.name?.[0] || "A"}
               </div>
             )}
             <div>
-              <h4 className="text-sm font-bold text-white">{ticket.user.name || "Verified Attendee"}</h4>
-              <p className="text-xs text-stone-400">{ticket.user.email}</p>
+              <h4 className="text-sm font-bold text-gray-900">{ticket.user.name || "Verified Attendee"}</h4>
+              <p className="text-xs text-gray-500">{ticket.user.email}</p>
             </div>
           </div>
 
           <div className="text-right">
-            <span className="text-[10px] uppercase font-bold text-stone-500 block">Ticket Code</span>
-            <span className="text-sm font-mono font-black text-amber-400 tracking-wider">
+            <span className="text-[10px] uppercase font-bold text-gray-400 block">Ticket Code</span>
+            <span className="text-sm font-mono font-black text-indigo-600 tracking-wider">
               {ticket.ticketCode}
             </span>
           </div>
         </div>
 
         {/* Visual Barcode & QR Code Section */}
-        <div className="bg-stone-950 border border-stone-800 rounded-2xl p-4 flex items-center justify-between">
+        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-4 flex items-center justify-between">
           <div className="space-y-1">
-            <div className="flex items-center gap-1.5 text-xs text-stone-300">
-              <Calendar className="w-3.5 h-3.5 text-orange-400" />
+            <div className="flex items-center gap-1.5 text-xs text-gray-600">
+              <Calendar className="w-3.5 h-3.5 text-blue-600" />
               <span>Sat, Sept 26, 2026 • 09:00 AM EST</span>
             </div>
-            <div className="flex items-center gap-1.5 text-xs text-stone-400">
-              <MapPin className="w-3.5 h-3.5 text-amber-400" />
+            <div className="flex items-center gap-1.5 text-xs text-gray-500">
+              <MapPin className="w-3.5 h-3.5 text-indigo-600" />
               <span>TP Ganesan Auditorium, SRM University</span>
             </div>
           </div>
@@ -127,14 +127,14 @@ export function TicketBadge({ ticket, onDelete }: TicketProps) {
       </div>
 
       {/* Ticket Footer */}
-      <div className="px-6 py-4 bg-stone-950/80 border-t border-stone-800 flex items-center justify-between text-xs">
-        <span className="text-stone-400 flex items-center gap-1">
-          <ShieldCheck className="w-3.5 h-3.5 text-emerald-400" /> Check-in Status: {ticket.checkedIn ? "Checked In" : "Ready"}
+      <div className="px-6 py-4 bg-white/90 backdrop-blur-md border-t border-gray-200 flex items-center justify-between text-xs">
+        <span className="text-gray-500 flex items-center gap-1">
+          <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Check-in Status: {ticket.checkedIn ? "Checked In" : "Ready"}
         </span>
         <div className="flex items-center gap-3">
           <button
             onClick={() => window.print()}
-            className="text-orange-400 hover:text-orange-300 font-semibold flex items-center gap-1 transition-colors"
+            className="text-blue-600 hover:text-orange-300 font-semibold flex items-center gap-1 transition-colors"
           >
             <Download className="w-3.5 h-3.5" /> Save Pass
           </button>

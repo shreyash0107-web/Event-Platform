@@ -76,17 +76,17 @@ export function AdminAttendeesTable() {
   };
 
   return (
-    <div className="bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden shadow-2xl space-y-6 p-6 sm:p-8">
+    <div className="bg-white border border-gray-200 rounded-3xl overflow-hidden shadow-xl shadow-gray-200/50 space-y-6 p-6 sm:p-8">
       {/* Controls Header */}
       <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
         <div>
-          <h2 className="text-xl font-extrabold text-white flex items-center gap-2">
+          <h2 className="text-xl font-extrabold text-gray-900 flex items-center gap-2">
             Registered Attendees List
             <span className="text-xs font-mono font-bold bg-orange-500/20 text-orange-300 border border-orange-500/30 px-2.5 py-0.5 rounded-full">
               {tickets.length} total
             </span>
           </h2>
-          <p className="text-xs text-stone-400 mt-1">
+          <p className="text-xs text-gray-500 mt-1">
             RBAC Protected Route • View attendee payments, ticket codes, and check-in statuses.
           </p>
         </div>
@@ -94,7 +94,7 @@ export function AdminAttendeesTable() {
         {/* CSV Export Action Button */}
         <a
           href="/api/admin/attendees/export"
-          className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-500 hover:to-orange-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-orange-600/20 transition-all shrink-0"
+          className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-500 hover:to-orange-500 text-gray-900 font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-orange-600/20 transition-all shrink-0"
         >
           <Download className="w-4 h-4" /> Export CSV Report
         </a>
@@ -109,9 +109,9 @@ export function AdminAttendeesTable() {
             placeholder="Search by code, user name, or email..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full bg-stone-950 border border-stone-800 rounded-xl pl-9 pr-4 py-2.5 text-xs text-white placeholder-stone-500 focus:outline-none focus:border-orange-500 transition-colors"
+            className="w-full bg-gray-50 border border-gray-200 rounded-xl pl-9 pr-4 py-2.5 text-xs text-gray-900 placeholder-stone-500 focus:outline-none focus:border-orange-500 transition-colors"
           />
-          <Search className="w-4 h-4 text-stone-500 absolute left-3 top-3" />
+          <Search className="w-4 h-4 text-gray-400 absolute left-3 top-3" />
         </div>
 
         {/* Tier Filter */}
@@ -119,7 +119,7 @@ export function AdminAttendeesTable() {
           <select
             value={tierFilter}
             onChange={(e) => setTierFilter(e.target.value)}
-            className="w-full bg-stone-950 border border-stone-800 rounded-xl px-3 py-2.5 text-xs text-stone-200 focus:outline-none focus:border-orange-500 transition-colors"
+            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-xs text-gray-800 focus:outline-none focus:border-orange-500 transition-colors"
           >
             <option value="ALL">All Ticket Tiers</option>
             <option value="EARLY_BIRD">Early Bird Pass</option>
@@ -133,7 +133,7 @@ export function AdminAttendeesTable() {
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="w-full bg-stone-950 border border-stone-800 rounded-xl px-3 py-2.5 text-xs text-stone-200 focus:outline-none focus:border-orange-500 transition-colors"
+            className="w-full bg-gray-50 border border-gray-200 rounded-xl px-3 py-2.5 text-xs text-gray-800 focus:outline-none focus:border-orange-500 transition-colors"
           >
             <option value="ALL">All Payment Statuses</option>
             <option value="PAID">PAID Only</option>
@@ -143,9 +143,9 @@ export function AdminAttendeesTable() {
       </div>
 
       {/* Table Section */}
-      <div className="border border-stone-800 rounded-2xl overflow-x-auto bg-stone-950/60">
+      <div className="border border-gray-200 rounded-2xl overflow-x-auto bg-white/80">
         <table className="w-full text-left text-xs">
-          <thead className="bg-stone-950 text-stone-400 font-semibold uppercase tracking-wider border-b border-stone-800">
+          <thead className="bg-gray-50 text-gray-500 font-semibold uppercase tracking-wider border-b border-gray-200">
             <tr>
               <th className="py-3.5 px-4">Attendee</th>
               <th className="py-3.5 px-4">Ticket Code</th>
@@ -156,30 +156,30 @@ export function AdminAttendeesTable() {
               <th className="py-3.5 px-4">Date</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-stone-800/80 text-stone-300">
+          <tbody className="divide-y divide-stone-800/80 text-gray-600">
             {loading ? (
               <tr>
-                <td colSpan={7} className="py-12 text-center text-stone-500">
-                  <RefreshCw className="w-6 h-6 animate-spin mx-auto mb-2 text-orange-400" />
+                <td colSpan={7} className="py-12 text-center text-gray-400">
+                  <RefreshCw className="w-6 h-6 animate-spin mx-auto mb-2 text-blue-600" />
                   Loading attendee records...
                 </td>
               </tr>
             ) : tickets.length === 0 ? (
               <tr>
-                <td colSpan={7} className="py-12 text-center text-stone-500">
+                <td colSpan={7} className="py-12 text-center text-gray-400">
                   No attendees matching filters found.
                 </td>
               </tr>
             ) : (
               tickets.map((t) => (
-                <tr key={t.id} className="hover:bg-stone-900/60 transition-colors">
+                <tr key={t.id} className="hover:bg-white transition-colors">
                   <td className="py-3.5 px-4">
                     <div className="flex items-center gap-2.5">
                       {t.user.image ? (
                         <img
                           src={t.user.image}
                           alt="Avatar"
-                          className="w-7 h-7 rounded-full object-cover border border-stone-700"
+                          className="w-7 h-7 rounded-full object-cover border border-gray-300"
                         />
                       ) : (
                         <div className="w-7 h-7 rounded-full bg-orange-600/30 text-orange-300 flex items-center justify-center font-bold text-xs">
@@ -187,23 +187,23 @@ export function AdminAttendeesTable() {
                         </div>
                       )}
                       <div>
-                        <span className="font-bold text-white block">{t.user.name || "Attendee"}</span>
-                        <span className="text-[11px] text-stone-400 block">{t.user.email}</span>
+                        <span className="font-bold text-gray-900 block">{t.user.name || "Attendee"}</span>
+                        <span className="text-[11px] text-gray-500 block">{t.user.email}</span>
                       </div>
                     </div>
                   </td>
-                  <td className="py-3.5 px-4 font-mono text-amber-400 font-bold">
+                  <td className="py-3.5 px-4 font-mono text-indigo-600 font-bold">
                     {t.ticketCode}
                   </td>
-                  <td className="py-3.5 px-4 font-semibold text-stone-200">
+                  <td className="py-3.5 px-4 font-semibold text-gray-800">
                     {t.tierName}
                   </td>
-                  <td className="py-3.5 px-4 font-mono font-bold text-emerald-400">
+                  <td className="py-3.5 px-4 font-mono font-bold text-emerald-600">
                     ${(t.priceInCents / 100).toFixed(2)}
                   </td>
                   <td className="py-3.5 px-4">
                     {t.status === "PAID" ? (
-                      <span className="inline-flex items-center gap-1 bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-2 py-0.5 rounded-full font-bold text-[10px]">
+                      <span className="inline-flex items-center gap-1 bg-emerald-500/20 text-emerald-600 border border-emerald-500/30 px-2 py-0.5 rounded-full font-bold text-[10px]">
                         <CheckCircle className="w-3 h-3" /> PAID
                       </span>
                     ) : (
@@ -217,14 +217,14 @@ export function AdminAttendeesTable() {
                       onClick={() => toggleCheckIn(t.id, t.checkedIn)}
                       className={`px-3 py-1 rounded-lg font-bold text-[11px] transition-all flex items-center gap-1.5 ${
                         t.checkedIn
-                          ? "bg-emerald-600 text-white shadow-sm hover:bg-emerald-500"
-                          : "bg-stone-800 text-stone-400 hover:text-white hover:bg-stone-700"
+                          ? "bg-emerald-600 text-gray-900 shadow-sm hover:bg-emerald-500"
+                          : "border-gray-200 text-gray-500 hover:text-gray-900 hover:bg-stone-700"
                       }`}
                     >
                       {t.checkedIn ? "Checked In" : "Check In"}
                     </button>
                   </td>
-                  <td className="py-3.5 px-4 text-[11px] text-stone-400">
+                  <td className="py-3.5 px-4 text-[11px] text-gray-500">
                     {new Date(t.createdAt).toLocaleDateString()}
                   </td>
                 </tr>

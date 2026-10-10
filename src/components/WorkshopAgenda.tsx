@@ -69,19 +69,19 @@ export function WorkshopAgenda() {
   ];
 
   return (
-    <section id="agenda" className="py-20 relative bg-stone-950/60 border-t border-b border-stone-800/80">
+    <section id="agenda" className="py-20 relative bg-white/80 border-t border-b border-gray-200/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           ref={headingRef}
           className={`reveal text-center max-w-3xl mx-auto mb-16 ${headingVisible ? "in-view" : ""}`}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20 text-xs font-bold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-50 text-blue-600 border border-blue-200 text-xs font-bold uppercase tracking-wider mb-4">
             Curriculum &amp; Schedule
           </div>
-          <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
-            Masterclass <span className="text-amber-400">Schedule &amp; Modules</span>
+          <h2 className="text-3xl sm:text-5xl font-black text-gray-900 tracking-tight">
+            Masterclass <span className="text-indigo-600">Schedule &amp; Modules</span>
           </h2>
-          <p className="text-stone-400 mt-4 text-base sm:text-lg">
+          <p className="text-gray-500 mt-4 text-base sm:text-lg">
             4 intensive hands-on modules designed to transform senior engineers into elite AI system architects.
           </p>
         </div>
@@ -103,25 +103,25 @@ export function WorkshopAgenda() {
                   style={{ transitionDelay: gridVisible ? `${index * 80}ms` : "0ms" }}
                   className={`reveal ${gridVisible ? "in-view" : ""} w-full text-left p-5 rounded-2xl border transition-all duration-200 flex items-start gap-4 hover:-transtone-y-0.5 ${
                     isActive
-                      ? "bg-stone-900 border-orange-500/60 shadow-xl shadow-orange-500/10 ring-1 ring-orange-500/30"
-                      : "bg-stone-900/40 border-stone-800/80 hover:bg-stone-900/70 hover:border-stone-700 hover:shadow-lg"
+                      ? "bg-white border-orange-500/60 shadow-xl shadow-orange-500/10 ring-1 ring-orange-500/30"
+                      : "bg-white border-gray-200/80 hover:bg-white/70 hover:border-gray-300 hover:shadow-lg"
                   }`}
                 >
                   <div
-                    className={`p-3 rounded-xl bg-gradient-to-br ${mod.color} text-white shadow-md`}
+                    className={`p-3 rounded-xl bg-gradient-to-br ${mod.color} text-gray-900 shadow-md`}
                   >
                     <Icon className="w-5 h-5" />
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="flex items-center gap-2 text-xs font-semibold text-stone-400 mb-1">
-                      <Clock className="w-3.5 h-3.5 text-amber-400" />
+                    <div className="flex items-center gap-2 text-xs font-semibold text-gray-500 mb-1">
+                      <Clock className="w-3.5 h-3.5 text-indigo-600" />
                       {mod.time}
                     </div>
-                    <h3 className="text-sm font-bold text-white truncate">{mod.title}</h3>
+                    <h3 className="text-sm font-bold text-gray-900 truncate">{mod.title}</h3>
                   </div>
                   <ChevronRight
-                    className={`w-5 h-5 text-stone-500 transition-transform ${
-                      isActive ? "rotate-90 text-amber-400" : ""
+                    className={`w-5 h-5 text-gray-400 transition-transform ${
+                      isActive ? "rotate-90 text-indigo-600" : ""
                     }`}
                   />
                 </button>
@@ -130,29 +130,29 @@ export function WorkshopAgenda() {
           </div>
 
           {/* Active Module Details Card (Right) */}
-          <div className="lg:col-span-7 bg-stone-900 border border-stone-800 rounded-3xl p-6 sm:p-8 shadow-2xl relative overflow-hidden">
-            <div className="absolute top-0 right-0 w-64 h-64 bg-orange-500/10 blur-3xl rounded-full pointer-events-none" />
+          <div className="lg:col-span-7 bg-white border border-gray-200 rounded-3xl p-6 sm:p-8 shadow-xl shadow-gray-200/50 relative overflow-hidden">
+            <div className="absolute top-0 right-0 w-64 h-64 bg-blue-50 blur-3xl rounded-full pointer-events-none" />
 
-            <div className="flex items-center gap-2 text-xs font-bold text-amber-400 uppercase tracking-widest mb-3">
+            <div className="flex items-center gap-2 text-xs font-bold text-indigo-600 uppercase tracking-widest mb-3">
               <Clock className="w-4 h-4" />
               {modules[activeModule].time}
             </div>
 
-            <h3 className="text-2xl font-black text-white mb-4">
+            <h3 className="text-2xl font-black text-gray-900 mb-4">
               {modules[activeModule].title}
             </h3>
 
-            <p className="text-stone-300 text-sm sm:text-base leading-relaxed mb-6">
+            <p className="text-gray-600 text-sm sm:text-base leading-relaxed mb-6">
               {modules[activeModule].description}
             </p>
 
-            <div className="space-y-4 pt-4 border-t border-stone-800">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-stone-400 flex items-center gap-2">
-                <Code className="w-4 h-4 text-orange-400" /> Key Topics & Code Alongs
+            <div className="space-y-4 pt-4 border-t border-gray-200">
+              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-500 flex items-center gap-2">
+                <Code className="w-4 h-4 text-blue-600" /> Key Topics & Code Alongs
               </h4>
               <ul className="space-y-3">
                 {modules[activeModule].topics.map((topic, i) => (
-                  <li key={i} className="flex items-start gap-3 text-xs sm:text-sm text-stone-300">
+                  <li key={i} className="flex items-start gap-3 text-xs sm:text-sm text-gray-600">
                     <span className="w-2 h-2 rounded-full bg-amber-400 mt-2 shrink-0" />
                     <span>{topic}</span>
                   </li>

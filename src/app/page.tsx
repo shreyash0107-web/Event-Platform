@@ -31,17 +31,17 @@ function FaqSection() {
   ];
 
   return (
-    <section className="py-20 border-t border-stone-800 bg-stone-950/80">
+    <section className="py-20 border-t border-gray-200 bg-white/90 backdrop-blur-md">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div
           ref={headingRef}
           className={`reveal text-center mb-12 ${headingVisible ? "in-view" : ""}`}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 text-xs font-bold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 text-purple-600 border border-yellow-500/20 text-xs font-bold uppercase tracking-wider mb-4">
             Frequently Asked Questions
           </div>
-          <h2 className="text-3xl sm:text-4xl font-black text-white">
-            Got Questions? <span className="text-amber-400">We&apos;ve Got Answers</span>
+          <h2 className="text-3xl sm:text-4xl font-black text-gray-900">
+            Got Questions? <span className="text-indigo-600">We&apos;ve Got Answers</span>
           </h2>
         </div>
 
@@ -52,12 +52,12 @@ function FaqSection() {
               className={`reveal ${listVisible ? "in-view" : ""}`}
               style={{ transitionDelay: listVisible ? `${i * 80}ms` : "0ms" }}
             >
-              <div className="bg-stone-900 border border-stone-800 rounded-2xl p-6 shadow-lg hover:border-stone-700 hover:shadow-xl hover:-transtone-y-0.5 transition-all duration-300 group">
-                <h3 className="text-base font-bold text-white mb-2 flex items-center gap-2 group-hover:text-orange-300 transition-colors">
-                  <HelpCircle className="w-5 h-5 text-orange-400 shrink-0" />
+              <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg hover:border-gray-300 hover:shadow-xl hover:-transtone-y-0.5 transition-all duration-300 group">
+                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center gap-2 group-hover:text-orange-300 transition-colors">
+                  <HelpCircle className="w-5 h-5 text-blue-600 shrink-0" />
                   {faq.q}
                 </h3>
-                <p className="text-xs sm:text-sm text-stone-400 leading-relaxed pl-7">{faq.a}</p>
+                <p className="text-xs sm:text-sm text-gray-500 leading-relaxed pl-7">{faq.a}</p>
               </div>
             </div>
           ))}
