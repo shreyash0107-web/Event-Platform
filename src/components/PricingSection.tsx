@@ -83,9 +83,9 @@ export function PricingSection() {
               Stripe Test Mode Enabled
             </div>
             <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
-              Select Your <span className="text-cyan-400">Masterclass Ticket</span>
+              Select Your <span className="text-amber-400">Masterclass Ticket</span>
             </h2>
-            <p className="text-slate-400 mt-4 text-base sm:text-lg">
+            <p className="text-stone-400 mt-4 text-base sm:text-lg">
               Full 8-hour access, repository access, live Q&amp;A, and digital verified certificate included with every pass.
             </p>
           </div>
@@ -106,36 +106,36 @@ export function PricingSection() {
                 <div
                   className={`relative h-full rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 group ${
                     isPopular
-                      ? "bg-gradient-to-b from-indigo-950/80 via-slate-900 to-slate-900 border-2 border-indigo-500 shadow-2xl shadow-indigo-500/20 hover:shadow-indigo-500/35 md:-translate-y-4 hover:-translate-y-5"
-                      : "bg-slate-900/80 border border-slate-800/80 hover:border-slate-600 hover:-translate-y-1 hover:shadow-xl hover:shadow-slate-900/50"
+                      ? "bg-gradient-to-b from-orange-950/80 via-stone-900 to-stone-900 border-2 border-orange-500 shadow-2xl shadow-orange-500/20 hover:shadow-orange-500/35 md:-transtone-y-4 hover:-transtone-y-5"
+                      : "bg-stone-900/80 border border-stone-800/80 hover:border-stone-600 hover:-transtone-y-1 hover:shadow-xl hover:shadow-stone-900/50"
                   }`}
                 >
                   {isPopular && (
-                    <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-indigo-500 to-violet-500 text-white text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
-                      <Sparkles className="w-3.5 h-3.5 text-cyan-300" /> Most Popular
+                    <div className="absolute -top-4 left-1/2 -transtone-x-1/2 bg-gradient-to-r from-orange-500 to-yellow-500 text-white text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                      <Sparkles className="w-3.5 h-3.5 text-amber-300" /> Most Popular
                     </div>
                   )}
 
                   <div>
                     <div className="flex items-center justify-between mb-4">
                       <h3 className="text-xl font-bold text-white">{tier.name}</h3>
-                      <span className="text-[11px] font-semibold text-slate-400 bg-slate-800/80 border border-slate-700 px-2.5 py-1 rounded-full">
+                      <span className="text-[11px] font-semibold text-stone-400 bg-stone-800/80 border border-stone-700 px-2.5 py-1 rounded-full">
                         {tier.availableSeats} seats left
                       </span>
                     </div>
 
                     <div className="mb-6">
                       <span className="text-4xl sm:text-5xl font-black text-white">{tier.formattedPrice}</span>
-                      <span className="text-slate-400 text-sm font-medium ml-2">USD / One-time</span>
+                      <span className="text-stone-400 text-sm font-medium ml-2">USD / One-time</span>
                     </div>
 
-                    <p className="text-xs text-slate-400 leading-relaxed mb-6">
+                    <p className="text-xs text-stone-400 leading-relaxed mb-6">
                       {tier.description}
                     </p>
 
-                    <div className="space-y-3 pt-6 border-t border-slate-800/80 mb-8">
+                    <div className="space-y-3 pt-6 border-t border-stone-800/80 mb-8">
                       {tier.features.map((feat, i) => (
-                        <div key={i} className="flex items-start gap-3 text-xs text-slate-300">
+                        <div key={i} className="flex items-start gap-3 text-xs text-stone-300">
                           <div className="p-0.5 rounded-full bg-emerald-500/20 text-emerald-400 shrink-0 mt-0.5">
                             <Check className="w-3.5 h-3.5" />
                           </div>
@@ -150,8 +150,8 @@ export function PricingSection() {
                     disabled={isLoading}
                     className={`btn-press w-full py-4 px-6 rounded-xl font-bold text-sm transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02] ${
                       isPopular
-                        ? "bg-gradient-to-r from-indigo-600 via-violet-600 to-cyan-500 hover:from-indigo-500 hover:to-cyan-400 text-white shadow-indigo-500/25 hover:shadow-indigo-500/50"
-                        : "bg-slate-800 hover:bg-slate-700 text-white border border-slate-700 hover:border-slate-500"
+                        ? "bg-gradient-to-r from-orange-600 via-yellow-600 to-amber-500 hover:from-orange-500 hover:to-amber-400 text-white shadow-orange-500/25 hover:shadow-orange-500/50"
+                        : "bg-stone-800 hover:bg-stone-700 text-white border border-stone-700 hover:border-stone-500"
                     } disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100`}
                   >
                     {isLoading ? (
@@ -177,12 +177,12 @@ export function PricingSection() {
             })}
           </div>
 
-          <div className="mt-12 text-center text-xs text-slate-400 flex items-center justify-center gap-6">
+          <div className="mt-12 text-center text-xs text-stone-400 flex items-center justify-center gap-6">
             <span className="flex items-center gap-1.5">
               <Lock className="w-3.5 h-3.5 text-emerald-400" /> Stripe Test Mode 256-bit Encryption
             </span>
             <span className="flex items-center gap-1.5">
-              <Shield className="w-3.5 h-3.5 text-indigo-400" /> Instant Automatic Ticket Dispatch
+              <Shield className="w-3.5 h-3.5 text-orange-400" /> Instant Automatic Ticket Dispatch
             </span>
           </div>
         </div>

@@ -43,13 +43,13 @@ export function SpeakersSection() {
           ref={headingRef}
           className={`reveal text-center max-w-3xl mx-auto mb-16 ${headingVisible ? "in-view" : ""}`}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-500/10 text-cyan-400 border border-cyan-500/20 text-xs font-bold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-amber-500/10 text-amber-400 border border-amber-500/20 text-xs font-bold uppercase tracking-wider mb-4">
             World-Class Instructors
           </div>
           <h2 className="text-3xl sm:text-5xl font-black text-white tracking-tight">
-            Learn From Industry <span className="text-cyan-400">Pioneers</span>
+            Learn From Industry <span className="text-amber-400">Pioneers</span>
           </h2>
-          <p className="text-slate-400 mt-4 text-base sm:text-lg">
+          <p className="text-stone-400 mt-4 text-base sm:text-lg">
             Directly learn from engineers who build the platforms and protocols powering modern web
             applications.
           </p>
@@ -65,22 +65,22 @@ export function SpeakersSection() {
                 transitionDelay: cardsVisible ? `${index * 100}ms` : "0ms",
               }}
             >
-              <div className="h-full bg-slate-900 border border-slate-800 rounded-3xl p-6 hover:border-indigo-500/50 hover:shadow-2xl hover:shadow-indigo-500/10 hover:-translate-y-2 transition-all duration-300 group flex flex-col justify-between">
+              <div className="h-full bg-stone-900 border border-stone-800 rounded-3xl p-6 hover:border-orange-500/50 hover:shadow-2xl hover:shadow-orange-500/10 hover:-transtone-y-2 transition-all duration-300 group flex flex-col justify-between">
                 <div>
-                  <div className="relative mb-6 overflow-hidden rounded-2xl border border-slate-800">
+                  <div className="relative mb-6 overflow-hidden rounded-2xl border border-stone-800">
                     <img
                       src={speaker.image}
                       alt={speaker.name}
                       className="w-full h-64 object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-transparent to-transparent opacity-80" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-80" />
                     {/* subtle top glow on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-indigo-500/0 to-transparent group-hover:from-indigo-500/10 transition-all duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-orange-500/0 to-transparent group-hover:from-orange-500/10 transition-all duration-500" />
                     <div className="absolute bottom-3 left-3 right-3 flex items-center gap-2">
                       {speaker.topics.map((t, i) => (
                         <span
                           key={i}
-                          className="text-[10px] font-extrabold uppercase tracking-wider bg-indigo-600/90 text-white px-2.5 py-1 rounded-md backdrop-blur-md"
+                          className="text-[10px] font-extrabold uppercase tracking-wider bg-orange-600/90 text-white px-2.5 py-1 rounded-md backdrop-blur-md"
                         >
                           {t}
                         </span>
@@ -88,31 +88,31 @@ export function SpeakersSection() {
                     </div>
                   </div>
 
-                  <h3 className="text-xl font-extrabold text-white group-hover:text-cyan-400 transition-colors duration-200">
+                  <h3 className="text-xl font-extrabold text-white group-hover:text-amber-400 transition-colors duration-200">
                     {speaker.name}
                   </h3>
-                  <div className="text-xs font-semibold text-indigo-400 mb-1 flex items-center gap-1.5 mt-1">
+                  <div className="text-xs font-semibold text-orange-400 mb-1 flex items-center gap-1.5 mt-1">
                     <Award className="w-3.5 h-3.5" />
                     {speaker.role}
                   </div>
-                  <div className="text-xs text-slate-400 mb-4 flex items-center gap-1.5">
-                    <Building2 className="w-3.5 h-3.5 text-slate-500" />
+                  <div className="text-xs text-stone-400 mb-4 flex items-center gap-1.5">
+                    <Building2 className="w-3.5 h-3.5 text-stone-500" />
                     {speaker.company}
                   </div>
 
-                  <p className="text-xs text-slate-300 leading-relaxed mb-6">{speaker.bio}</p>
+                  <p className="text-xs text-stone-300 leading-relaxed mb-6">{speaker.bio}</p>
                 </div>
 
-                <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between">
-                  <span className="text-[11px] text-slate-500 font-medium">
+                <div className="pt-4 border-t border-stone-800/80 flex items-center justify-between">
+                  <span className="text-[11px] text-stone-500 font-medium">
                     Verified Masterclass Speaker
                   </span>
-                  <div className="flex items-center gap-3 text-slate-400">
+                  <div className="flex items-center gap-3 text-stone-400">
                     {[Twitter, Linkedin, Github].map((Icon, i) => (
                       <a
                         key={i}
                         href="#"
-                        className="hover:text-cyan-400 hover:scale-110 transition-all duration-200"
+                        className="hover:text-amber-400 hover:scale-110 transition-all duration-200"
                       >
                         <Icon className="w-4 h-4" />
                       </a>

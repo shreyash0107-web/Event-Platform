@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark scroll-smooth">
-      <body className={`${inter.className} bg-stone-950 text-slate-100 min-h-screen flex flex-col`}>
+      <body className={`${inter.className} bg-stone-950 text-stone-100 min-h-screen flex flex-col`}>
         <Providers>
           <Navbar />
           <div className="flex-1">{children}</div>

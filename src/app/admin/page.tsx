@@ -33,13 +33,13 @@ export default function AdminDashboardPage() {
     <AdminLayout>
       <div className="space-y-8 max-w-7xl mx-auto">
         {/* Header Title */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-slate-800 pb-6">
+        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-stone-800 pb-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-violet-500/10 text-violet-400 border border-violet-500/20 text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 text-yellow-400 border border-yellow-500/20 text-xs font-bold uppercase tracking-wider mb-2">
               <Shield className="w-3.5 h-3.5" /> Secured Admin Portal
             </div>
             <h1 className="text-3xl font-black text-white">Event Analytics & Revenue</h1>
-            <p className="text-xs text-slate-400 mt-1">
+            <p className="text-xs text-stone-400 mt-1">
               Live registration metrics, ticket sales volume, and check-in tracking.
             </p>
           </div>
@@ -47,14 +47,14 @@ export default function AdminDashboardPage() {
           <div className="flex items-center gap-3">
             <button
               onClick={fetchStats}
-              className="p-2.5 bg-slate-900 border border-slate-800 text-slate-300 hover:text-white rounded-xl transition-colors"
+              className="p-2.5 bg-stone-900 border border-stone-800 text-stone-300 hover:text-white rounded-xl transition-colors"
               title="Refresh Data"
             >
-              <RefreshCw className={`w-4 h-4 ${loading ? "animate-spin text-violet-400" : ""}`} />
+              <RefreshCw className={`w-4 h-4 ${loading ? "animate-spin text-yellow-400" : ""}`} />
             </button>
             <a
               href="/api/admin/attendees/export"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg transition-all"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-500 hover:to-orange-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg transition-all"
             >
               <Download className="w-4 h-4" /> Export CSV
             </a>
@@ -62,8 +62,8 @@ export default function AdminDashboardPage() {
         </div>
 
         {loading || !data ? (
-          <div className="py-24 text-center text-slate-500">
-            <RefreshCw className="w-8 h-8 animate-spin mx-auto mb-3 text-violet-400" />
+          <div className="py-24 text-center text-stone-500">
+            <RefreshCw className="w-8 h-8 animate-spin mx-auto mb-3 text-yellow-400" />
             <p className="text-sm font-semibold">Loading Admin Dashboard Analytics...</p>
           </div>
         ) : (
@@ -72,17 +72,17 @@ export default function AdminDashboardPage() {
             <AdminStatsCards stats={data.stats} />
 
             {/* Recent Registrations Card */}
-            <div className="bg-slate-900 border border-slate-800 rounded-3xl p-6 sm:p-8 shadow-2xl">
+            <div className="bg-stone-900 border border-stone-800 rounded-3xl p-6 sm:p-8 shadow-2xl">
               <div className="flex items-center justify-between mb-6">
                 <div>
                   <h3 className="text-lg font-bold text-white flex items-center gap-2">
                     Recent Ticket Orders
                   </h3>
-                  <p className="text-xs text-slate-400">Latest registration transactions</p>
+                  <p className="text-xs text-stone-400">Latest registration transactions</p>
                 </div>
                 <Link
                   href="/admin/attendees"
-                  className="text-xs font-semibold text-violet-400 hover:text-violet-300 flex items-center gap-1 transition-colors"
+                  className="text-xs font-semibold text-yellow-400 hover:text-yellow-300 flex items-center gap-1 transition-colors"
                 >
                   View All Attendees <ArrowUpRight className="w-4 h-4" />
                 </Link>
@@ -92,20 +92,20 @@ export default function AdminDashboardPage() {
                 {data.recentTickets.map((t: any) => (
                   <div
                     key={t.id}
-                    className="p-4 rounded-2xl bg-slate-950/80 border border-slate-800/80 flex items-center justify-between text-xs"
+                    className="p-4 rounded-2xl bg-stone-950/80 border border-stone-800/80 flex items-center justify-between text-xs"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-xl bg-violet-600/20 text-violet-400 border border-violet-500/30 flex items-center justify-center font-bold">
+                      <div className="w-9 h-9 rounded-xl bg-yellow-600/20 text-yellow-400 border border-yellow-500/30 flex items-center justify-center font-bold">
                         {t.user.name?.[0] || "U"}
                       </div>
                       <div>
                         <span className="font-bold text-white block">{t.user.name || "Attendee"}</span>
-                        <span className="text-slate-400 text-[11px]">{t.user.email}</span>
+                        <span className="text-stone-400 text-[11px]">{t.user.email}</span>
                       </div>
                     </div>
 
                     <div className="text-right">
-                      <span className="font-mono text-cyan-400 font-bold block">{t.ticketCode}</span>
+                      <span className="font-mono text-amber-400 font-bold block">{t.ticketCode}</span>
                       <span className="text-emerald-400 font-semibold">${(t.priceInCents / 100).toFixed(2)} USD</span>
                     </div>
                   </div>

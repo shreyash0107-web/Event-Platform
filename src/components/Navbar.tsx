@@ -48,35 +48,35 @@ export function Navbar() {
       <header
         className={`sticky top-0 z-40 w-full border-b transition-all duration-300 ${
           scrolled
-            ? "border-slate-700/60 bg-slate-950/95 backdrop-blur-2xl shadow-xl shadow-slate-950/60"
-            : "border-slate-800/50 bg-slate-950/70 backdrop-blur-xl"
+            ? "border-stone-700/60 bg-stone-950/95 backdrop-blur-2xl shadow-xl shadow-stone-950/60"
+            : "border-stone-800/50 bg-stone-950/70 backdrop-blur-xl"
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
           {/* Brand Logo */}
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-600 via-violet-600 to-cyan-400 p-0.5 shadow-lg shadow-indigo-500/20 group-hover:shadow-indigo-500/40 transition-all duration-300">
-              <div className="w-full h-full bg-slate-950 rounded-[10px] flex items-center justify-center">
-                <Sparkles className="w-5 h-5 text-cyan-400 group-hover:scale-110 transition-transform" />
+            <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-orange-600 via-yellow-600 to-amber-400 p-0.5 shadow-lg shadow-orange-500/20 group-hover:shadow-orange-500/40 transition-all duration-300">
+              <div className="w-full h-full bg-stone-950 rounded-[10px] flex items-center justify-center">
+                <Sparkles className="w-5 h-5 text-amber-400 group-hover:scale-110 transition-transform" />
               </div>
             </div>
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-extrabold text-lg text-white tracking-tight">
-                  DevPulse<span className="text-cyan-400">.2026</span>
+                  DevPulse<span className="text-amber-400">.2026</span>
                 </span>
-                <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-indigo-500/10 text-indigo-400 border border-indigo-500/20">
+                <span className="text-[10px] font-bold uppercase tracking-widest px-2 py-0.5 rounded-full bg-orange-500/10 text-orange-400 border border-orange-500/20">
                   Masterclass
                 </span>
               </div>
-              <span className="text-[11px] text-slate-400 block -mt-1 font-medium">
+              <span className="text-[11px] text-stone-400 block -mt-1 font-medium">
                 AI & Microservices Workshop
               </span>
             </div>
           </Link>
 
           {/* Desktop Navigation Links */}
-          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+          <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-stone-300">
             {[
               { href: "/#about", label: "Workshop" },
               { href: "/#agenda", label: "Agenda" },
@@ -86,7 +86,7 @@ export function Navbar() {
               <a
                 key={href}
                 href={href}
-                className="relative hover:text-cyan-400 transition-colors duration-200 after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-cyan-400 after:transition-all after:duration-200 hover:after:w-full"
+                className="relative hover:text-amber-400 transition-colors duration-200 after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-amber-400 after:transition-all after:duration-200 hover:after:w-full"
               >
                 {label}
               </a>
@@ -94,18 +94,18 @@ export function Navbar() {
             {session && (
               <Link
                 href="/tickets"
-                className="relative hover:text-cyan-400 transition-colors duration-200 flex items-center gap-1.5 after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-cyan-400 after:transition-all after:duration-200 hover:after:w-full"
+                className="relative hover:text-amber-400 transition-colors duration-200 flex items-center gap-1.5 after:absolute after:bottom-[-2px] after:left-0 after:h-[2px] after:w-0 after:bg-amber-400 after:transition-all after:duration-200 hover:after:w-full"
               >
-                <Ticket className="w-4 h-4 text-indigo-400" />
+                <Ticket className="w-4 h-4 text-orange-400" />
                 My Pass
               </Link>
             )}
             {session?.user?.role === "ADMIN" && (
               <Link
                 href="/admin"
-                className="flex items-center gap-1.5 bg-gradient-to-r from-violet-600/20 to-indigo-600/20 text-violet-300 border border-violet-500/30 px-3 py-1 rounded-full text-xs font-semibold hover:border-violet-400 transition-all shadow-sm"
+                className="flex items-center gap-1.5 bg-gradient-to-r from-yellow-600/20 to-orange-600/20 text-yellow-300 border border-yellow-500/30 px-3 py-1 rounded-full text-xs font-semibold hover:border-yellow-400 transition-all shadow-sm"
               >
-                <Shield className="w-3.5 h-3.5 text-violet-400" />
+                <Shield className="w-3.5 h-3.5 text-yellow-400" />
                 Admin Dashboard
               </Link>
             )}
@@ -116,22 +116,22 @@ export function Navbar() {
             {/* In-App Inbox Button */}
             <button
               onClick={() => setInboxOpen(true)}
-              className="relative p-2 rounded-xl border border-slate-800 bg-slate-900/60 text-slate-300 hover:text-white hover:border-indigo-500/40 transition-all group"
+              className="relative p-2 rounded-xl border border-stone-800 bg-stone-900/60 text-stone-300 hover:text-white hover:border-orange-500/40 transition-all group"
               title="Open Confirmation Email Viewer"
             >
-              <Mail className="w-4 h-4 group-hover:scale-110 transition-transform text-indigo-400" />
+              <Mail className="w-4 h-4 group-hover:scale-110 transition-transform text-orange-400" />
               <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-500 rounded-full animate-ping" />
               <span className="absolute -top-1 -right-1 w-2.5 h-2.5 bg-emerald-500 rounded-full" />
             </button>
 
             {status === "authenticated" ? (
               <div className="flex items-center gap-3">
-                <div className="flex items-center gap-2 bg-slate-900 border border-slate-800 rounded-full p-1 pl-3 pr-2">
-                  <span className="text-xs font-semibold text-slate-200">
+                <div className="flex items-center gap-2 bg-stone-900 border border-stone-800 rounded-full p-1 pl-3 pr-2">
+                  <span className="text-xs font-semibold text-stone-200">
                     {session.user.name || session.user.email}
                   </span>
                   {session.user.role === "ADMIN" ? (
-                    <span className="bg-violet-500/20 text-violet-300 border border-violet-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full">
+                    <span className="bg-yellow-500/20 text-yellow-300 border border-yellow-500/30 text-[10px] font-bold px-2 py-0.5 rounded-full">
                       ADMIN
                     </span>
                   ) : (
@@ -143,18 +143,18 @@ export function Navbar() {
                     <img
                       src={session.user.image}
                       alt="User avatar"
-                      className="w-7 h-7 rounded-full object-cover border border-indigo-500/30"
+                      className="w-7 h-7 rounded-full object-cover border border-orange-500/30"
                       onError={() => setAvatarError(true)}
                     />
                   ) : (
-                    <div className="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-white text-xs font-bold">
+                    <div className="w-7 h-7 rounded-full bg-orange-600 flex items-center justify-center text-white text-xs font-bold">
                       {(session.user.name?.[0] || session.user.email?.[0] || "U").toUpperCase()}
                     </div>
                   )}
                 </div>
                 <button
                   onClick={() => signOut({ callbackUrl: "/" })}
-                  className="p-2 text-slate-400 hover:text-rose-400 rounded-xl hover:bg-slate-900 transition-colors"
+                  className="p-2 text-stone-400 hover:text-rose-400 rounded-xl hover:bg-stone-900 transition-colors"
                   title="Sign Out"
                 >
                   <LogOut className="w-4 h-4" />
@@ -164,29 +164,29 @@ export function Navbar() {
               <div className="relative">
                 <button
                   onClick={() => setLoginDropdownOpen(!loginDropdownOpen)}
-                  className="btn-press flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-semibold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/50 hover:scale-[1.04] transition-all duration-200"
+                  className="btn-press flex items-center gap-2 bg-gradient-to-r from-orange-600 to-yellow-600 hover:from-orange-500 hover:to-yellow-500 text-white font-semibold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-orange-500/25 hover:shadow-orange-500/50 hover:scale-[1.04] transition-all duration-200"
                 >
                   <span>Sign In / Demo</span>
                   <ChevronDown className={`w-3.5 h-3.5 transition-transform ${loginDropdownOpen ? "rotate-180" : ""}`} />
                 </button>
 
                 {loginDropdownOpen && (
-                  <div className="absolute right-0 mt-2 w-72 bg-slate-900 border border-slate-800 rounded-2xl shadow-2xl p-3 space-y-2 z-50 animate-in fade-in zoom-in-95 duration-150">
-                    <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider px-2 py-1">
+                  <div className="absolute right-0 mt-2 w-72 bg-stone-900 border border-stone-800 rounded-2xl shadow-2xl p-3 space-y-2 z-50 animate-in fade-in zoom-in-95 duration-150">
+                    <div className="text-[11px] font-semibold text-stone-400 uppercase tracking-wider px-2 py-1">
                       OAuth Sign In
                     </div>
                     <button
                       onClick={() => signIn("github", { callbackUrl: "/" })}
-                      className="w-full flex items-center justify-between px-3 py-2 bg-slate-950 hover:bg-slate-800 text-white rounded-xl border border-slate-800 text-xs font-medium transition-all"
+                      className="w-full flex items-center justify-between px-3 py-2 bg-stone-950 hover:bg-stone-800 text-white rounded-xl border border-stone-800 text-xs font-medium transition-all"
                     >
                       <span className="flex items-center gap-2">
-                        <Github className="w-4 h-4 text-slate-200" /> Continue with GitHub
+                        <Github className="w-4 h-4 text-stone-200" /> Continue with GitHub
                       </span>
-                      <span className="text-[10px] text-slate-500">OAuth</span>
+                      <span className="text-[10px] text-stone-500">OAuth</span>
                     </button>
                     <button
                       onClick={() => signIn("google", { callbackUrl: "/" })}
-                      className="w-full flex items-center justify-between px-3 py-2 bg-slate-950 hover:bg-slate-800 text-white rounded-xl border border-slate-800 text-xs font-medium transition-all"
+                      className="w-full flex items-center justify-between px-3 py-2 bg-stone-950 hover:bg-stone-800 text-white rounded-xl border border-stone-800 text-xs font-medium transition-all"
                     >
                       <span className="flex items-center gap-2">
                         <svg className="w-4 h-4" viewBox="0 0 24 24">
@@ -197,29 +197,29 @@ export function Navbar() {
                         </svg>
                         Continue with Google
                       </span>
-                      <span className="text-[10px] text-slate-500">OAuth</span>
+                      <span className="text-[10px] text-stone-500">OAuth</span>
                     </button>
 
-                    <div className="border-t border-slate-800 pt-2 mt-2">
-                      <div className="text-[11px] font-semibold text-indigo-400 uppercase tracking-wider px-2 py-1 flex items-center justify-between">
+                    <div className="border-t border-stone-800 pt-2 mt-2">
+                      <div className="text-[11px] font-semibold text-orange-400 uppercase tracking-wider px-2 py-1 flex items-center justify-between">
                         <span>Instant Demo Login</span>
-                        <span className="text-[9px] bg-indigo-500/20 text-indigo-300 px-1.5 py-0.5 rounded">No password</span>
+                        <span className="text-[9px] bg-orange-500/20 text-orange-300 px-1.5 py-0.5 rounded">No password</span>
                       </div>
                       <button
                         onClick={() => handleDemoSignIn("USER")}
-                        className="w-full text-left px-3 py-2 bg-indigo-950/40 hover:bg-indigo-900/60 border border-indigo-500/30 rounded-xl text-xs font-semibold text-indigo-200 transition-all flex items-center justify-between mb-1.5"
+                        className="w-full text-left px-3 py-2 bg-orange-950/40 hover:bg-orange-900/60 border border-orange-500/30 rounded-xl text-xs font-semibold text-orange-200 transition-all flex items-center justify-between mb-1.5"
                       >
                         <span>Login as Attendee</span>
-                        <User className="w-3.5 h-3.5 text-indigo-400" />
+                        <User className="w-3.5 h-3.5 text-orange-400" />
                       </button>
                       <button
                         onClick={() => handleDemoSignIn("ADMIN")}
-                        className="w-full text-left px-3 py-2 bg-violet-950/50 hover:bg-violet-900/70 border border-violet-500/40 rounded-xl text-xs font-semibold text-violet-200 transition-all flex items-center justify-between"
+                        className="w-full text-left px-3 py-2 bg-yellow-950/50 hover:bg-yellow-900/70 border border-yellow-500/40 rounded-xl text-xs font-semibold text-yellow-200 transition-all flex items-center justify-between"
                       >
                         <span className="flex items-center gap-1.5">
-                          <Lock className="w-3 h-3 text-violet-400" /> Login as Admin
+                          <Lock className="w-3 h-3 text-yellow-400" /> Login as Admin
                         </span>
-                        <Shield className="w-3.5 h-3.5 text-violet-400" />
+                        <Shield className="w-3.5 h-3.5 text-yellow-400" />
                       </button>
                     </div>
                   </div>
@@ -232,13 +232,13 @@ export function Navbar() {
           <div className="md:hidden flex items-center gap-2">
             <button
               onClick={() => setInboxOpen(true)}
-              className="p-2 text-indigo-400 border border-slate-800 rounded-xl bg-slate-900"
+              className="p-2 text-orange-400 border border-stone-800 rounded-xl bg-stone-900"
             >
               <Mail className="w-5 h-5" />
             </button>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-2 text-slate-300 hover:text-white rounded-xl border border-slate-800 bg-slate-900"
+              className="p-2 text-stone-300 hover:text-white rounded-xl border border-stone-800 bg-stone-900"
             >
               {mobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -247,32 +247,32 @@ export function Navbar() {
 
         {/* Mobile Dropdown Nav */}
         {mobileMenuOpen && (
-          <div className="md:hidden border-b border-slate-800 bg-slate-950 px-4 py-4 space-y-3">
+          <div className="md:hidden border-b border-stone-800 bg-stone-950 px-4 py-4 space-y-3">
             <a
               href="/#about"
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-sm text-slate-300 hover:text-white"
+              className="block text-sm text-stone-300 hover:text-white"
             >
               Workshop
             </a>
             <a
               href="/#agenda"
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-sm text-slate-300 hover:text-white"
+              className="block text-sm text-stone-300 hover:text-white"
             >
               Agenda
             </a>
             <a
               href="/#speakers"
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-sm text-slate-300 hover:text-white"
+              className="block text-sm text-stone-300 hover:text-white"
             >
               Speakers
             </a>
             <a
               href="/#pricing"
               onClick={() => setMobileMenuOpen(false)}
-              className="block text-sm text-slate-300 hover:text-white"
+              className="block text-sm text-stone-300 hover:text-white"
             >
               Pricing
             </a>
@@ -280,7 +280,7 @@ export function Navbar() {
               <Link
                 href="/tickets"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block text-sm text-indigo-400 font-semibold"
+                className="block text-sm text-orange-400 font-semibold"
               >
                 My Pass & Tickets
               </Link>
@@ -289,12 +289,12 @@ export function Navbar() {
               <Link
                 href="/admin"
                 onClick={() => setMobileMenuOpen(false)}
-                className="block text-sm text-violet-400 font-bold"
+                className="block text-sm text-yellow-400 font-bold"
               >
                 Admin Dashboard
               </Link>
             )}
-            <div className="pt-2 border-t border-slate-800">
+            <div className="pt-2 border-t border-stone-800">
               {status === "authenticated" ? (
                 <button
                   onClick={() => signOut({ callbackUrl: "/" })}
@@ -304,20 +304,20 @@ export function Navbar() {
                 </button>
               ) : (
                 <div className="space-y-2 pt-1">
-                  <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider px-1">
+                  <div className="text-[11px] font-semibold text-stone-400 uppercase tracking-wider px-1">
                     OAuth Sign In
                   </div>
                   <button
                     onClick={() => signIn("github", { callbackUrl: "/" })}
-                    className="w-full flex items-center justify-between px-3 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-xl border border-slate-800 text-sm font-medium transition-all"
+                    className="w-full flex items-center justify-between px-3 py-2 bg-stone-900 hover:bg-stone-800 text-white rounded-xl border border-stone-800 text-sm font-medium transition-all"
                   >
                     <span className="flex items-center gap-2">
-                      <Github className="w-5 h-5 text-slate-200" /> Continue with GitHub
+                      <Github className="w-5 h-5 text-stone-200" /> Continue with GitHub
                     </span>
                   </button>
                   <button
                     onClick={() => signIn("google", { callbackUrl: "/" })}
-                    className="w-full flex items-center justify-between px-3 py-2 bg-slate-900 hover:bg-slate-800 text-white rounded-xl border border-slate-800 text-sm font-medium transition-all"
+                    className="w-full flex items-center justify-between px-3 py-2 bg-stone-900 hover:bg-stone-800 text-white rounded-xl border border-stone-800 text-sm font-medium transition-all"
                   >
                     <span className="flex items-center gap-2">
                       <svg className="w-5 h-5" viewBox="0 0 24 24">
@@ -330,18 +330,18 @@ export function Navbar() {
                     </span>
                   </button>
 
-                  <div className="text-[11px] font-semibold text-indigo-400 uppercase tracking-wider px-1 pt-2">
+                  <div className="text-[11px] font-semibold text-orange-400 uppercase tracking-wider px-1 pt-2">
                     Instant Demo Login
                   </div>
                   <button
                     onClick={() => handleDemoSignIn("USER")}
-                    className="w-full text-center py-2 bg-indigo-600 text-white rounded-xl text-sm font-bold"
+                    className="w-full text-center py-2 bg-orange-600 text-white rounded-xl text-sm font-bold"
                   >
                     Quick Demo Sign In (Attendee)
                   </button>
                   <button
                     onClick={() => handleDemoSignIn("ADMIN")}
-                    className="w-full text-center py-2 bg-violet-600 text-white rounded-xl text-sm font-bold"
+                    className="w-full text-center py-2 bg-yellow-600 text-white rounded-xl text-sm font-bold"
                   >
                     Quick Demo Sign In (Admin)
                   </button>

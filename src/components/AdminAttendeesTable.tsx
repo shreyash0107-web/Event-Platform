@@ -76,17 +76,17 @@ export function AdminAttendeesTable() {
   };
 
   return (
-    <div className="bg-slate-900 border border-slate-800 rounded-3xl overflow-hidden shadow-2xl space-y-6 p-6 sm:p-8">
+    <div className="bg-stone-900 border border-stone-800 rounded-3xl overflow-hidden shadow-2xl space-y-6 p-6 sm:p-8">
       {/* Controls Header */}
       <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-4">
         <div>
           <h2 className="text-xl font-extrabold text-white flex items-center gap-2">
             Registered Attendees List
-            <span className="text-xs font-mono font-bold bg-indigo-500/20 text-indigo-300 border border-indigo-500/30 px-2.5 py-0.5 rounded-full">
+            <span className="text-xs font-mono font-bold bg-orange-500/20 text-orange-300 border border-orange-500/30 px-2.5 py-0.5 rounded-full">
               {tickets.length} total
             </span>
           </h2>
-          <p className="text-xs text-slate-400 mt-1">
+          <p className="text-xs text-stone-400 mt-1">
             RBAC Protected Route • View attendee payments, ticket codes, and check-in statuses.
           </p>
         </div>
@@ -94,7 +94,7 @@ export function AdminAttendeesTable() {
         {/* CSV Export Action Button */}
         <a
           href="/api/admin/attendees/export"
-          className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-violet-600 to-indigo-600 hover:from-violet-500 hover:to-indigo-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-indigo-600/20 transition-all shrink-0"
+          className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-500 hover:to-orange-500 text-white font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-orange-600/20 transition-all shrink-0"
         >
           <Download className="w-4 h-4" /> Export CSV Report
         </a>
@@ -109,9 +109,9 @@ export function AdminAttendeesTable() {
             placeholder="Search by code, user name, or email..."
             value={search}
             onChange={(e) => setSearch(e.target.value)}
-            className="w-full bg-slate-950 border border-slate-800 rounded-xl pl-9 pr-4 py-2.5 text-xs text-white placeholder-slate-500 focus:outline-none focus:border-indigo-500 transition-colors"
+            className="w-full bg-stone-950 border border-stone-800 rounded-xl pl-9 pr-4 py-2.5 text-xs text-white placeholder-stone-500 focus:outline-none focus:border-orange-500 transition-colors"
           />
-          <Search className="w-4 h-4 text-slate-500 absolute left-3 top-3" />
+          <Search className="w-4 h-4 text-stone-500 absolute left-3 top-3" />
         </div>
 
         {/* Tier Filter */}
@@ -119,7 +119,7 @@ export function AdminAttendeesTable() {
           <select
             value={tierFilter}
             onChange={(e) => setTierFilter(e.target.value)}
-            className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-indigo-500 transition-colors"
+            className="w-full bg-stone-950 border border-stone-800 rounded-xl px-3 py-2.5 text-xs text-stone-200 focus:outline-none focus:border-orange-500 transition-colors"
           >
             <option value="ALL">All Ticket Tiers</option>
             <option value="EARLY_BIRD">Early Bird Pass</option>
@@ -133,7 +133,7 @@ export function AdminAttendeesTable() {
           <select
             value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
-            className="w-full bg-slate-950 border border-slate-800 rounded-xl px-3 py-2.5 text-xs text-slate-200 focus:outline-none focus:border-indigo-500 transition-colors"
+            className="w-full bg-stone-950 border border-stone-800 rounded-xl px-3 py-2.5 text-xs text-stone-200 focus:outline-none focus:border-orange-500 transition-colors"
           >
             <option value="ALL">All Payment Statuses</option>
             <option value="PAID">PAID Only</option>
@@ -143,9 +143,9 @@ export function AdminAttendeesTable() {
       </div>
 
       {/* Table Section */}
-      <div className="border border-slate-800 rounded-2xl overflow-x-auto bg-slate-950/60">
+      <div className="border border-stone-800 rounded-2xl overflow-x-auto bg-stone-950/60">
         <table className="w-full text-left text-xs">
-          <thead className="bg-slate-950 text-slate-400 font-semibold uppercase tracking-wider border-b border-slate-800">
+          <thead className="bg-stone-950 text-stone-400 font-semibold uppercase tracking-wider border-b border-stone-800">
             <tr>
               <th className="py-3.5 px-4">Attendee</th>
               <th className="py-3.5 px-4">Ticket Code</th>
@@ -156,46 +156,46 @@ export function AdminAttendeesTable() {
               <th className="py-3.5 px-4">Date</th>
             </tr>
           </thead>
-          <tbody className="divide-y divide-slate-800/80 text-slate-300">
+          <tbody className="divide-y divide-stone-800/80 text-stone-300">
             {loading ? (
               <tr>
-                <td colSpan={7} className="py-12 text-center text-slate-500">
-                  <RefreshCw className="w-6 h-6 animate-spin mx-auto mb-2 text-indigo-400" />
+                <td colSpan={7} className="py-12 text-center text-stone-500">
+                  <RefreshCw className="w-6 h-6 animate-spin mx-auto mb-2 text-orange-400" />
                   Loading attendee records...
                 </td>
               </tr>
             ) : tickets.length === 0 ? (
               <tr>
-                <td colSpan={7} className="py-12 text-center text-slate-500">
+                <td colSpan={7} className="py-12 text-center text-stone-500">
                   No attendees matching filters found.
                 </td>
               </tr>
             ) : (
               tickets.map((t) => (
-                <tr key={t.id} className="hover:bg-slate-900/60 transition-colors">
+                <tr key={t.id} className="hover:bg-stone-900/60 transition-colors">
                   <td className="py-3.5 px-4">
                     <div className="flex items-center gap-2.5">
                       {t.user.image ? (
                         <img
                           src={t.user.image}
                           alt="Avatar"
-                          className="w-7 h-7 rounded-full object-cover border border-slate-700"
+                          className="w-7 h-7 rounded-full object-cover border border-stone-700"
                         />
                       ) : (
-                        <div className="w-7 h-7 rounded-full bg-indigo-600/30 text-indigo-300 flex items-center justify-center font-bold text-xs">
+                        <div className="w-7 h-7 rounded-full bg-orange-600/30 text-orange-300 flex items-center justify-center font-bold text-xs">
                           {t.user.name?.[0] || "U"}
                         </div>
                       )}
                       <div>
                         <span className="font-bold text-white block">{t.user.name || "Attendee"}</span>
-                        <span className="text-[11px] text-slate-400 block">{t.user.email}</span>
+                        <span className="text-[11px] text-stone-400 block">{t.user.email}</span>
                       </div>
                     </div>
                   </td>
-                  <td className="py-3.5 px-4 font-mono text-cyan-400 font-bold">
+                  <td className="py-3.5 px-4 font-mono text-amber-400 font-bold">
                     {t.ticketCode}
                   </td>
-                  <td className="py-3.5 px-4 font-semibold text-slate-200">
+                  <td className="py-3.5 px-4 font-semibold text-stone-200">
                     {t.tierName}
                   </td>
                   <td className="py-3.5 px-4 font-mono font-bold text-emerald-400">
@@ -218,13 +218,13 @@ export function AdminAttendeesTable() {
                       className={`px-3 py-1 rounded-lg font-bold text-[11px] transition-all flex items-center gap-1.5 ${
                         t.checkedIn
                           ? "bg-emerald-600 text-white shadow-sm hover:bg-emerald-500"
-                          : "bg-slate-800 text-slate-400 hover:text-white hover:bg-slate-700"
+                          : "bg-stone-800 text-stone-400 hover:text-white hover:bg-stone-700"
                       }`}
                     >
                       {t.checkedIn ? "Checked In" : "Check In"}
                     </button>
                   </td>
-                  <td className="py-3.5 px-4 text-[11px] text-slate-400">
+                  <td className="py-3.5 px-4 text-[11px] text-stone-400">
                     {new Date(t.createdAt).toLocaleDateString()}
                   </td>
                 </tr>
