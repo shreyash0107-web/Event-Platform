@@ -147,7 +147,7 @@ export function Navbar() {
                       onError={() => setAvatarError(true)}
                     />
                   ) : (
-                    <div className="w-7 h-7 rounded-full bg-indigo-600 flex items-center justify-center text-gray-900 text-xs font-bold">
+                    <div className="w-7 h-7 rounded-full bg-[#5c45ff] flex items-center justify-center text-white text-xs font-bold">
                       {(session.user.name?.[0] || session.user.email?.[0] || "U").toUpperCase()}
                     </div>
                   )}
@@ -164,7 +164,7 @@ export function Navbar() {
               <div className="relative">
                 <button
                   onClick={() => setLoginDropdownOpen(!loginDropdownOpen)}
-                  className="btn-press flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-500 hover:to-purple-500 text-gray-900 font-semibold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/50 hover:scale-[1.04] transition-all duration-200"
+                  className="btn-press flex items-center gap-2 bg-[#5c45ff] hover:bg-indigo-500 text-white font-semibold text-xs px-4 py-2.5 rounded-xl shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/50 hover:scale-[1.04] transition-all duration-200"
                 >
                   <span>Sign In / Demo</span>
                   <ChevronDown className={`w-3.5 h-3.5 transition-transform ${loginDropdownOpen ? "rotate-180" : ""}`} />
@@ -335,13 +335,13 @@ export function Navbar() {
                   </div>
                   <button
                     onClick={() => handleDemoSignIn("USER")}
-                    className="w-full text-center py-2 bg-indigo-600 text-gray-900 rounded-xl text-sm font-bold"
+                    className="w-full text-center py-2 bg-[#5c45ff] text-white rounded-xl text-sm font-bold"
                   >
                     Quick Demo Sign In (Attendee)
                   </button>
                   <button
                     onClick={() => handleDemoSignIn("ADMIN")}
-                    className="w-full text-center py-2 bg-purple-600 text-gray-900 rounded-xl text-sm font-bold"
+                    className="w-full text-center py-2 bg-[#5c45ff] text-white rounded-xl text-sm font-bold"
                   >
                     Quick Demo Sign In (Admin)
                   </button>

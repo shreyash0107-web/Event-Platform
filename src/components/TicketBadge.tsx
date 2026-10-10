@@ -86,7 +86,7 @@ export function TicketBadge({ ticket, onDelete }: TicketProps) {
                 className="w-12 h-12 rounded-2xl object-cover border border-indigo-500/40 shadow-md"
               />
             ) : (
-              <div className="w-12 h-12 rounded-2xl bg-indigo-600 flex items-center justify-center text-gray-900 text-base font-bold shadow-md">
+              <div className="w-12 h-12 rounded-2xl bg-[#5c45ff] flex items-center justify-center text-white text-base font-bold shadow-md">
                 {ticket.user.name?.[0] || "A"}
               </div>
             )}

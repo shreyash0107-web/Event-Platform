@@ -150,7 +150,7 @@ export function PricingSection() {
                     disabled={isLoading}
                     className={`btn-press w-full py-4 px-6 rounded-xl font-bold text-sm transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02] ${
                       isPopular
-                        ? "bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-gray-900 shadow-indigo-500/25 hover:shadow-indigo-500/50"
+                        ? "bg-[#5c45ff] hover:bg-indigo-500 text-white shadow-indigo-500/25 hover:shadow-indigo-500/50"
                         : "border-gray-200 hover:bg-stone-700 text-gray-900 border border-gray-300 hover:border-stone-500"
                     } disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100`}
                   >

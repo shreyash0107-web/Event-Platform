@@ -80,7 +80,7 @@ export function SpeakersSection() {
                       {speaker.topics.map((t, i) => (
                         <span
                           key={i}
-                          className="text-[10px] font-extrabold uppercase tracking-wider bg-indigo-600/90 text-gray-900 px-2.5 py-1 rounded-md backdrop-blur-md"
+                          className="text-[10px] font-extrabold uppercase tracking-wider bg-[#5c45ff] text-white px-2.5 py-1 rounded-md backdrop-blur-md"
                         >
                           {t}
                         </span>

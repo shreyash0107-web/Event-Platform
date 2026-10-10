@@ -191,7 +191,7 @@ export function StripeTestModal({ isOpen, onClose, ticketData, onSuccess }: Prop
             <button
               type="submit"
               disabled={isProcessing}
-              className="w-full py-3.5 px-4 bg-gradient-to-r from-indigo-600 via-purple-600 to-indigo-500 hover:from-indigo-500 hover:to-indigo-400 text-gray-900 font-bold text-sm rounded-xl shadow-lg shadow-indigo-600/30 flex items-center justify-center gap-2 transition-all"
+              className="w-full py-3.5 px-4 bg-[#5c45ff] hover:bg-indigo-500 text-white font-bold text-sm rounded-xl shadow-lg shadow-indigo-600/30 flex items-center justify-center gap-2 transition-all"
             >
               {isProcessing ? (
                 <>
