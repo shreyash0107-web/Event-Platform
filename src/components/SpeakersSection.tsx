@@ -65,7 +65,7 @@ export function SpeakersSection() {
                 transitionDelay: cardsVisible ? `${index * 100}ms` : "0ms",
               }}
             >
-              <div className="h-full bg-white border border-gray-200 rounded-3xl p-6 hover:border-orange-500/50 hover:shadow-xl shadow-gray-200/50 hover:shadow-orange-500/10 hover:-transtone-y-2 transition-all duration-300 group flex flex-col justify-between">
+              <div className="h-full bg-white border border-gray-200 rounded-3xl p-6 hover:border-blue-500/50 hover:shadow-xl shadow-gray-200/50 hover:shadow-blue-500/10 hover:-transtone-y-2 transition-all duration-300 group flex flex-col justify-between">
                 <div>
                   <div className="relative mb-6 overflow-hidden rounded-2xl border border-gray-200">
                     <img
@@ -75,12 +75,12 @@ export function SpeakersSection() {
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-stone-950 via-transparent to-transparent opacity-80" />
                     {/* subtle top glow on hover */}
-                    <div className="absolute inset-0 bg-gradient-to-b from-orange-500/0 to-transparent group-hover:from-orange-500/10 transition-all duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-b from-blue-500/0 to-transparent group-hover:from-blue-500/10 transition-all duration-500" />
                     <div className="absolute bottom-3 left-3 right-3 flex items-center gap-2">
                       {speaker.topics.map((t, i) => (
                         <span
                           key={i}
-                          className="text-[10px] font-extrabold uppercase tracking-wider bg-orange-600/90 text-gray-900 px-2.5 py-1 rounded-md backdrop-blur-md"
+                          className="text-[10px] font-extrabold uppercase tracking-wider bg-blue-600/90 text-gray-900 px-2.5 py-1 rounded-md backdrop-blur-md"
                         >
                           {t}
                         </span>

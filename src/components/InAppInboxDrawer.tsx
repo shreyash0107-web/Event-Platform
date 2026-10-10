@@ -105,7 +105,7 @@ export function InAppInboxDrawer({ isOpen, onClose }: Props) {
                   onClick={() => setSelectedEmail(email)}
                   className={`p-3.5 rounded-xl border transition-all cursor-pointer ${
                     selectedEmail?.id === email.id
-                      ? "bg-orange-600/15 border-orange-500/50 shadow-lg"
+                      ? "bg-blue-600/15 border-blue-500/50 shadow-lg"
                       : "bg-white border-gray-200 hover:border-gray-300"
                   }`}
                 >
@@ -121,7 +121,7 @@ export function InAppInboxDrawer({ isOpen, onClose }: Props) {
                     {email.subject}
                   </h4>
                   <div className="flex items-center justify-between text-[11px] text-gray-500">
-                    <span className="border-gray-200 text-orange-300 font-mono px-1.5 py-0.5 rounded text-[10px]">
+                    <span className="border-gray-200 text-blue-300 font-mono px-1.5 py-0.5 rounded text-[10px]">
                       {email.ticketCode}
                     </span>
                     <span className="text-emerald-600 font-semibold">
@@ -147,7 +147,7 @@ export function InAppInboxDrawer({ isOpen, onClose }: Props) {
                     <span className="bg-emerald-500/20 text-emerald-600 border border-emerald-500/30 px-2 py-0.5 rounded-full flex items-center gap-1 font-medium">
                       <CheckCircle className="w-3 h-3" /> Status: {selectedEmail.status}
                     </span>
-                    <span className="bg-orange-500/20 text-orange-300 border border-orange-500/30 px-2 py-0.5 rounded-full font-medium">
+                    <span className="bg-blue-500/20 text-blue-300 border border-blue-500/30 px-2 py-0.5 rounded-full font-medium">
                       Tier: {selectedEmail.tier}
                     </span>
                   </div>
@@ -155,7 +155,7 @@ export function InAppInboxDrawer({ isOpen, onClose }: Props) {
 
                 {/* Email Body Preview Card */}
                 <div className="bg-gray-50 border border-gray-200 rounded-xl p-5 space-y-4">
-                  <div className="text-center p-4 rounded-lg bg-gradient-to-r from-orange-900/40 to-purple-900/40 border border-orange-500/30">
+                  <div className="text-center p-4 rounded-lg bg-gradient-to-r from-blue-900/40 to-purple-900/40 border border-blue-500/30">
                     <span className="text-[10px] uppercase tracking-widest font-bold text-blue-600 block mb-1">
                       Official Workshop Ticket Pass
                     </span>
@@ -187,7 +187,7 @@ export function InAppInboxDrawer({ isOpen, onClose }: Props) {
                     <a
                       href="/tickets"
                       onClick={onClose}
-                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-orange-300 underline"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 hover:text-blue-300 underline"
                     >
                       View Digital Pass in Portal <ExternalLink className="w-3 h-3" />
                     </a>

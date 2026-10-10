@@ -35,7 +35,7 @@ export default function AdminDashboardPage() {
         {/* Header Title */}
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 border-b border-gray-200 pb-6">
           <div>
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 text-purple-600 border border-yellow-500/20 text-xs font-bold uppercase tracking-wider mb-2">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 text-purple-600 border border-purple-500/20 text-xs font-bold uppercase tracking-wider mb-2">
               <Shield className="w-3.5 h-3.5" /> Secured Admin Portal
             </div>
             <h1 className="text-3xl font-black text-gray-900">Event Analytics & Revenue</h1>
@@ -54,7 +54,7 @@ export default function AdminDashboardPage() {
             </button>
             <a
               href="/api/admin/attendees/export"
-              className="inline-flex items-center gap-2 bg-gradient-to-r from-yellow-600 to-orange-600 hover:from-yellow-500 hover:to-orange-500 text-gray-900 font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg transition-all"
+              className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-blue-600 hover:from-purple-500 hover:to-blue-500 text-gray-900 font-bold text-xs px-4 py-2.5 rounded-xl shadow-lg transition-all"
             >
               <Download className="w-4 h-4" /> Export CSV
             </a>
@@ -82,7 +82,7 @@ export default function AdminDashboardPage() {
                 </div>
                 <Link
                   href="/admin/attendees"
-                  className="text-xs font-semibold text-purple-600 hover:text-yellow-300 flex items-center gap-1 transition-colors"
+                  className="text-xs font-semibold text-purple-600 hover:text-purple-300 flex items-center gap-1 transition-colors"
                 >
                   View All Attendees <ArrowUpRight className="w-4 h-4" />
                 </Link>
@@ -95,7 +95,7 @@ export default function AdminDashboardPage() {
                     className="p-4 rounded-2xl bg-white/90 backdrop-blur-md border border-gray-200/80 flex items-center justify-between text-xs"
                   >
                     <div className="flex items-center gap-3">
-                      <div className="w-9 h-9 rounded-xl bg-yellow-600/20 text-purple-600 border border-yellow-500/30 flex items-center justify-center font-bold">
+                      <div className="w-9 h-9 rounded-xl bg-purple-600/20 text-purple-600 border border-purple-500/30 flex items-center justify-center font-bold">
                         {t.user.name?.[0] || "U"}
                       </div>
                       <div>

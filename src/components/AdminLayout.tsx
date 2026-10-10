@@ -14,7 +14,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
     return (
       <div className="min-h-screen bg-gray-50 flex items-center justify-center text-gray-900">
         <div className="flex items-center gap-3">
-          <div className="w-5 h-5 border-2 border-orange-500 border-t-transparent rounded-full animate-spin" />
+          <div className="w-5 h-5 border-2 border-blue-500 border-t-transparent rounded-full animate-spin" />
           <span className="text-sm font-semibold">Verifying Admin Access...</span>
         </div>
       </div>
@@ -36,13 +36,13 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
 
           <div className="bg-gray-50 border border-gray-200 p-3 rounded-xl text-left text-xs text-gray-600">
             <span className="font-semibold text-gray-500 block mb-1">Quick Admin Access:</span>
-            Sign in using the top-right menu and choose <strong className="text-yellow-300">Login as Admin</strong> to evaluate this portal.
+            Sign in using the top-right menu and choose <strong className="text-purple-300">Login as Admin</strong> to evaluate this portal.
           </div>
 
           <div className="pt-2">
             <Link
               href="/"
-              className="w-full inline-flex items-center justify-center gap-2 bg-orange-600 hover:bg-orange-500 text-gray-900 font-bold text-xs py-3 px-4 rounded-xl transition-colors"
+              className="w-full inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-500 text-gray-900 font-bold text-xs py-3 px-4 rounded-xl transition-colors"
             >
               <ArrowLeft className="w-4 h-4" /> Return to Main Landing Page
             </Link>
@@ -58,7 +58,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
       <aside className="w-full md:w-64 border-b md:border-b-0 md:border-r border-gray-200 bg-white p-6 flex flex-col justify-between shrink-0">
         <div className="space-y-6">
           <div className="flex items-center gap-3">
-            <div className="p-2 rounded-xl bg-yellow-600/20 text-purple-600 border border-yellow-500/30">
+            <div className="p-2 rounded-xl bg-purple-600/20 text-purple-600 border border-purple-500/30">
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
@@ -74,7 +74,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
               href="/admin"
               className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all ${
                 pathname === "/admin"
-                  ? "bg-yellow-600/20 text-yellow-300 border border-yellow-500/40 shadow-sm"
+                  ? "bg-purple-600/20 text-purple-300 border border-purple-500/40 shadow-sm"
                   : "text-gray-500 hover:text-gray-800 hover:border-gray-200"
               }`}
             >
@@ -85,7 +85,7 @@ export function AdminLayout({ children }: { children: React.ReactNode }) {
               href="/admin/attendees"
               className={`flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-semibold transition-all ${
                 pathname === "/admin/attendees"
-                  ? "bg-yellow-600/20 text-yellow-300 border border-yellow-500/40 shadow-sm"
+                  ? "bg-purple-600/20 text-purple-300 border border-purple-500/40 shadow-sm"
                   : "text-gray-500 hover:text-gray-800 hover:border-gray-200"
               }`}
             >

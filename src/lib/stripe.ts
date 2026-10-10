@@ -24,7 +24,7 @@ export const TICKET_TIERS = {
       "Discord VIP Community Access",
       "Post-Event Workshop Recordings"
     ],
-    badgeColor: "from-amber-500 to-blue-600",
+    badgeColor: "from-indigo-500 to-blue-600",
     popular: false,
     availableSeats: 42,
   },
@@ -41,7 +41,7 @@ export const TICKET_TIERS = {
       "Exclusive Architecture E-Book",
       "Priority Live Q&A Queue"
     ],
-    badgeColor: "from-orange-500 to-yellow-600",
+    badgeColor: "from-blue-500 to-purple-600",
     popular: true,
     availableSeats: 85,
   },
@@ -58,7 +58,7 @@ export const TICKET_TIERS = {
       "Lifetime Access to All Future Workshops",
       "Official Physical Swag Box Delivered to Door"
     ],
-    badgeColor: "from-amber-400 to-emerald-500",
+    badgeColor: "from-indigo-400 to-emerald-500",
     popular: false,
     availableSeats: 15,
   },

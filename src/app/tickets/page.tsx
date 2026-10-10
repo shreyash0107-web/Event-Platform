@@ -59,7 +59,7 @@ export default function MyTicketsPage() {
                 callbackUrl: "/tickets",
               })
             }
-            className="w-full py-3 bg-gradient-to-r from-orange-600 to-yellow-600 text-gray-900 text-xs font-bold rounded-xl shadow-lg flex items-center justify-center gap-2"
+            className="w-full py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-gray-900 text-xs font-bold rounded-xl shadow-lg flex items-center justify-center gap-2"
           >
             <UserCheck className="w-4 h-4" /> Sign In as Demo Attendee
           </button>
@@ -97,7 +97,7 @@ export default function MyTicketsPage() {
           </p>
           <Link
             href="/#pricing"
-            className="inline-flex items-center gap-2 bg-orange-600 hover:bg-orange-500 text-gray-900 font-bold text-xs px-6 py-3 rounded-xl transition-colors"
+            className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-500 text-gray-900 font-bold text-xs px-6 py-3 rounded-xl transition-colors"
           >
             Reserve Workshop Ticket
           </Link>

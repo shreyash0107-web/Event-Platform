@@ -106,13 +106,13 @@ export function PricingSection() {
                 <div
                   className={`relative h-full rounded-3xl p-8 flex flex-col justify-between transition-all duration-300 group ${
                     isPopular
-                      ? "bg-gradient-to-b from-orange-950/80 via-stone-900 to-stone-900 border-2 border-orange-500 shadow-xl shadow-gray-200/50 shadow-orange-500/20 hover:shadow-orange-500/35 md:-transtone-y-4 hover:-transtone-y-5"
+                      ? "bg-gradient-to-b from-blue-950/80 via-stone-900 to-stone-900 border-2 border-blue-500 shadow-xl shadow-gray-200/50 shadow-blue-500/20 hover:shadow-blue-500/35 md:-transtone-y-4 hover:-transtone-y-5"
                       : "bg-white/80 border border-gray-200/80 hover:border-stone-600 hover:-transtone-y-1 hover:shadow-xl hover:shadow-stone-900/50"
                   }`}
                 >
                   {isPopular && (
-                    <div className="absolute -top-4 left-1/2 -transtone-x-1/2 bg-gradient-to-r from-orange-500 to-yellow-500 text-gray-900 text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
-                      <Sparkles className="w-3.5 h-3.5 text-amber-300" /> Most Popular
+                    <div className="absolute -top-4 left-1/2 -transtone-x-1/2 bg-gradient-to-r from-blue-500 to-purple-500 text-gray-900 text-xs font-black uppercase tracking-widest px-4 py-1.5 rounded-full shadow-lg flex items-center gap-1.5">
+                      <Sparkles className="w-3.5 h-3.5 text-indigo-300" /> Most Popular
                     </div>
                   )}
 
@@ -150,7 +150,7 @@ export function PricingSection() {
                     disabled={isLoading}
                     className={`btn-press w-full py-4 px-6 rounded-xl font-bold text-sm transition-all duration-200 flex items-center justify-center gap-2 shadow-lg hover:scale-[1.02] ${
                       isPopular
-                        ? "bg-gradient-to-r from-orange-600 via-yellow-600 to-amber-500 hover:from-orange-500 hover:to-amber-400 text-gray-900 shadow-orange-500/25 hover:shadow-orange-500/50"
+                        ? "bg-gradient-to-r from-blue-600 via-purple-600 to-indigo-500 hover:from-blue-500 hover:to-indigo-400 text-gray-900 shadow-blue-500/25 hover:shadow-blue-500/50"
                         : "border-gray-200 hover:bg-stone-700 text-gray-900 border border-gray-300 hover:border-stone-500"
                     } disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100`}
                   >

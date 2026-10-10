@@ -14,7 +14,7 @@ export function WorkshopAgenda() {
       time: "09:00 AM - 10:45 AM",
       title: "Module 1: Building High-Performance LLM Agents & Tool Use",
       icon: Cpu,
-      color: "from-amber-500 to-blue-500",
+      color: "from-indigo-500 to-blue-500",
       description:
         "Architecting multi-step autonomous AI agents, function calling schemas, stateful reasoning loops, and prompt caching strategies.",
       topics: [
@@ -28,7 +28,7 @@ export function WorkshopAgenda() {
       time: "11:00 AM - 12:30 PM",
       title: "Module 2: RAG Systems & Hybrid Vector Search at Scale",
       icon: Database,
-      color: "from-orange-500 to-yellow-500",
+      color: "from-blue-500 to-purple-500",
       description:
         "Deep dive into semantic search, sparse-dense hybrid retrieval, chunking algorithms, and reranking models for enterprise knowledge bases.",
       topics: [
@@ -42,7 +42,7 @@ export function WorkshopAgenda() {
       time: "01:30 PM - 03:15 PM",
       title: "Module 3: Secured API Gateways, OAuth 2.0 & Role Management",
       icon: Shield,
-      color: "from-yellow-500 to-purple-500",
+      color: "from-purple-500 to-purple-500",
       description:
         "Implementing zero-trust backend authentication, OAuth 2.0 with Google & GitHub, JWT token validation, and Role-Based Access Control (RBAC).",
       topics: [
@@ -103,7 +103,7 @@ export function WorkshopAgenda() {
                   style={{ transitionDelay: gridVisible ? `${index * 80}ms` : "0ms" }}
                   className={`reveal ${gridVisible ? "in-view" : ""} w-full text-left p-5 rounded-2xl border transition-all duration-200 flex items-start gap-4 hover:-transtone-y-0.5 ${
                     isActive
-                      ? "bg-white border-orange-500/60 shadow-xl shadow-orange-500/10 ring-1 ring-orange-500/30"
+                      ? "bg-white border-blue-500/60 shadow-xl shadow-blue-500/10 ring-1 ring-blue-500/30"
                       : "bg-white border-gray-200/80 hover:bg-white/70 hover:border-gray-300 hover:shadow-lg"
                   }`}
                 >
@@ -153,7 +153,7 @@ export function WorkshopAgenda() {
               <ul className="space-y-3">
                 {modules[activeModule].topics.map((topic, i) => (
                   <li key={i} className="flex items-start gap-3 text-xs sm:text-sm text-gray-600">
-                    <span className="w-2 h-2 rounded-full bg-amber-400 mt-2 shrink-0" />
+                    <span className="w-2 h-2 rounded-full bg-indigo-400 mt-2 shrink-0" />
                     <span>{topic}</span>
                   </li>
                 ))}

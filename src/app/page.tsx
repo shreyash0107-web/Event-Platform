@@ -37,7 +37,7 @@ function FaqSection() {
           ref={headingRef}
           className={`reveal text-center mb-12 ${headingVisible ? "in-view" : ""}`}
         >
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 text-purple-600 border border-yellow-500/20 text-xs font-bold uppercase tracking-wider mb-4">
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-purple-500/10 text-purple-600 border border-purple-500/20 text-xs font-bold uppercase tracking-wider mb-4">
             Frequently Asked Questions
           </div>
           <h2 className="text-3xl sm:text-4xl font-black text-gray-900">
@@ -53,7 +53,7 @@ function FaqSection() {
               style={{ transitionDelay: listVisible ? `${i * 80}ms` : "0ms" }}
             >
               <div className="bg-white border border-gray-200 rounded-2xl p-6 shadow-lg hover:border-gray-300 hover:shadow-xl hover:-transtone-y-0.5 transition-all duration-300 group">
-                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center gap-2 group-hover:text-orange-300 transition-colors">
+                <h3 className="text-base font-bold text-gray-900 mb-2 flex items-center gap-2 group-hover:text-blue-300 transition-colors">
                   <HelpCircle className="w-5 h-5 text-blue-600 shrink-0" />
                   {faq.q}
                 </h3>

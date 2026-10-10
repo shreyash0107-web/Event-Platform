@@ -69,7 +69,7 @@ export function AdminStatsCards({ stats }: Props) {
         <div className="bg-white border border-gray-200 rounded-3xl p-6 shadow-xl">
           <div className="flex items-center justify-between mb-4">
             <span className="text-xs font-bold uppercase tracking-wider text-gray-500">Emails Auto-Sent</span>
-            <div className="p-2 rounded-xl bg-yellow-500/10 text-purple-600 border border-yellow-500/20">
+            <div className="p-2 rounded-xl bg-purple-500/10 text-purple-600 border border-purple-500/20">
               <Mail className="w-5 h-5" />
             </div>
           </div>
@@ -91,7 +91,7 @@ export function AdminStatsCards({ stats }: Props) {
             <div className="text-2xl font-extrabold text-indigo-600">{stats.breakdown.EARLY_BIRD}</div>
             <div className="w-full border-gray-200 h-1.5 rounded-full mt-3 overflow-hidden">
               <div
-                className="bg-amber-400 h-full rounded-full"
+                className="bg-indigo-400 h-full rounded-full"
                 style={{ width: `${Math.min(100, (stats.breakdown.EARLY_BIRD / 50) * 100)}%` }}
               />
             </div>
@@ -102,7 +102,7 @@ export function AdminStatsCards({ stats }: Props) {
             <div className="text-2xl font-extrabold text-blue-600">{stats.breakdown.STANDARD}</div>
             <div className="w-full border-gray-200 h-1.5 rounded-full mt-3 overflow-hidden">
               <div
-                className="bg-orange-400 h-full rounded-full"
+                className="bg-blue-400 h-full rounded-full"
                 style={{ width: `${Math.min(100, (stats.breakdown.STANDARD / 100) * 100)}%` }}
               />
             </div>
@@ -113,7 +113,7 @@ export function AdminStatsCards({ stats }: Props) {
             <div className="text-2xl font-extrabold text-indigo-600">{stats.breakdown.VIP}</div>
             <div className="w-full border-gray-200 h-1.5 rounded-full mt-3 overflow-hidden">
               <div
-                className="bg-amber-400 h-full rounded-full"
+                className="bg-indigo-400 h-full rounded-full"
                 style={{ width: `${Math.min(100, (stats.breakdown.VIP / 20) * 100)}%` }}
               />
             </div>

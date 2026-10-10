@@ -144,7 +144,7 @@ export function HeroSection() {
           </a>
           <a
             href="/#agenda"
-            className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:border-gray-200 text-gray-800 border border-gray-300 hover:border-orange-500/50 font-semibold text-base px-8 py-4 rounded-xl hover:shadow-lg hover:shadow-orange-500/10 transition-all duration-200"
+            className="btn-press w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white hover:border-gray-200 text-gray-800 border border-gray-300 hover:border-blue-500/50 font-semibold text-base px-8 py-4 rounded-xl hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-200"
           >
             <Zap className="w-5 h-5 text-blue-600" />
             <span>Explore Workshop Agenda</span>
